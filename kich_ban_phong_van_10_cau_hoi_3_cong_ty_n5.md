@@ -136,7 +136,7 @@
   👉 *Cứ nghe thấy "Chiimu" hoặc "Chiimuwaaku" là hỏi làm việc nhóm!*
 * 🗣️ **KEYWORD TRONG CÂU TRẢ LỜI (Miệng nói):**  
   * [P] `先輩によく聞くこと` (Hỏi kỹ tiền bối)  
-  * [R] `一人で決める` ➔ `ミスが出る` (Một mình tự quyết sẽ ra lỗi)  
+  * [R] `一人で決める` ➔ `バグが発生する` (Một mình tự quyết sẽ phát sinh bug)  
   * [E] `分からないことはすぐ聞く` ➔ `ノートにメモ` ➔ `チームのルールを守る` (Giữ đúng quy tắc)  
   * [P] `みんなと笑顔で仕事` (Cười vui vẻ hòa đồng)
 * **Người phỏng vấn hỏi:**  
@@ -145,8 +145,8 @@
 * **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
   * **[P] Ý chính:** `一番大切なことは、「先輩によく聞くこと」です。`  
     *(Ichiban taisetsu na koto wa,「senpai ni yoku kiku koto」desu.)* 👉 Điều quan trọng nhất là "hỏi kỹ tiền bối".
-  * **[R] Lý do:** `一人で決めると、ミスが出ます。`  
-    *(Hitori de kimeru to, misu ga demasu.)* 👉 Nếu tự mình quyết định một mình thì sẽ dễ xảy ra sai sót.
+  * **[R] Lý do:** `一人で決めると、バグが発生します。`  
+    *(Hitori de kimeru to, bagu ga hassei shimasu.)* 👉 Nếu tự mình quyết định một mình thì sẽ phát sinh bug.
   * **[E] Dẫn chứng:**  
     `インターンの時、分からないことはすぐ先輩に聞きました。`  
     *(Intaan no toki, wakaranai koto wa sugu senpai ni kikimashita.)* 👉 Khi thực tập, việc chưa rõ em hỏi tiền bối ngay.  
@@ -243,8 +243,8 @@
   👉 *Cứ nghe thấy chữ "Chuui sareta" hoặc "Kaizen" là hỏi khi bị nhắc nhở/góp ý!*
 * 🗣️ **KEYWORD TRONG CÂU TRẢ LỜI (Miệng nói):**  
   * [P] `すぐに謝る` ➔ `素直に直す` (Xin lỗi ngay, thật thà sửa)  
-  * [R] `ミスを隠さない` (Không bao giờ giấu lỗi)  
-  * [E] `「ありがとうございます」` ➔ `すぐメモに書く` ➔ `同じミスはしない`  
+  * [R] `バグを隠さない` (Không bao giờ giấu bug)  
+  * [E] `「ありがとうございます」` ➔ `すぐメモに書く` ➔ `同じバグは作らない`  
   * [P] `この気持ちを大切にする`
 * **Người phỏng vấn hỏi:**  
   `先輩や上司に注意された時、どうしますか？`  
@@ -253,13 +253,13 @@
   * **[P] Ý chính:**  
     `すぐに謝ります。` *(Sugu ni ayamarimasu.)* 👉 Em lập tức nhận lỗi và xin lỗi.  
     `素直に直します。` *(Sunao ni naoshimasu.)* 👉 Em thật thà tiếp thu và sửa chữa ngay.
-  * **[R] Lý do:** `ミスを隠しません。`  
-    *(Misu wo kakushimasen.)* 👉 Em tuyệt đối không bao giờ giấu giếm lỗi lầm.
+  * **[R] Lý do:** `バグを隠しません。`  
+    *(Bagu wo kakushimasen.)* 👉 Em tuyệt đối không bao giờ giấu giếm bug (lỗi).
   * **[E] Dẫn chứng:**  
     `先輩に注意された時、「ありがとうございます」と言いました。`  
     *(Senpai ni chuui sareta toki,「arigatou gozaimasu」to iimashita.)* 👉 Khi được nhắc nhở, em nói cảm ơn.  
     `すぐメモに書きました。` *(Sugu memo ni kakimashita.)* 👉 Em ghi ngay vào sổ tay.  
-    `同じミスはしません。` *(Onaji misu wa shimasen.)* 👉 Em cam kết không lặp lại lỗi đó nữa.
+    `同じバグは作りません。` *(Onaji bagu wa tsukurimasen.)* 👉 Em cam kết không tạo ra bug như vậy nữa.
   * **[P] Khẳng định:** `この気持ちを大切にします。`  
     *(Kono kimochi wo taisetsu ni shimasu.)* 👉 Em sẽ luôn trân trọng thái độ cầu tiến này.
 

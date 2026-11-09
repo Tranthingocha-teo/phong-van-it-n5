@@ -1,20 +1,18 @@
-# BẢNG KỊCH BẢN PHỎNG VẤN IT (100% CÂU ĐƠN N5 - TUYỆT ĐỐI KHÔNG DÙNG CÂU GHÉP)
+# BẢNG KỊCH BẢN PHỎNG VẤN IT (100% CÂU ĐƠN N5 - CHUẨN TỪ VỰNG: BAGU & HASSEI)
 **Ứng viên:** Trần Thị Ngọc Hà (チャン ・ ティ ・ ゴック ・ ハ)  
 **Mục tiêu 3 Công ty Hokkaido:** 株式会社テクノラボ | 北海道電子機器株式会社 | 株式会社流研  
 **Trang web luyện nói trực tuyến có phát âm:** https://tranthingocha-teo.github.io/phong-van-it-n5/  
 
 ---
 
-### 🌟 NGUYÊN TẮC VÀNG KHI NÓI (CHUẨN N5 - TỰ NHIÊN - ĐẬM CHẤT HÀ):
-1. **100% CÂU ĐƠN NGẮN:** Mỗi câu chỉ từ **3 đến 5 từ**. Nói xong 1 ý là ngắt bằng dấu chấm `。`.
-2. **TUYỆT ĐỐI KHÔNG DÙNG CÂU GHÉP:**
-   - CẤM nối câu bằng `〜て、` ở giữa (Ví dụ: cấm `車に乗りますから、...`).
-   - CẤM nối câu bằng `〜ので、` hoặc `〜から、` ở giữa.
-   - Thay vào đó: Tách làm 2 câu ngắn độc lập, câu sau bắt đầu bằng `だから、` (Vì thế/Do đó) hoặc `でも、` (Nhưng).
-3. **CHUẨN MÔ HÌNH PREP:**
+### 🌟 NGUYÊN TẮC VÀNG KHI NÓI (CHUẨN N5 - ĐÚNG TỪ VỰNG THỰC TẾ):
+1. **LỖI KỸ THUẬT = `バグ` (Bagu):** Tuyệt đối không dùng từ lạ, thống nhất 100% dùng `バグ` (Bug/Lỗi phần mềm).
+2. **PHÁT SINH / PHÁT HIỆN = `発生` (`はっせい` / Hassei):** Dùng `バグが発生しました` (phát sinh bug) / `バグは発生しませんでした` (không phát sinh bug).
+3. **100% CÂU ĐƠN NGẮN (3 - 5 từ/câu):** Nói xong 1 ý là ngắt bằng dấu chấm `。`. Tuyệt đối không dùng câu ghép phức tạp.
+4. **CHUẨN MÔ HÌNH PREP:**
    - **[P] Point (Ý chính):** Đưa ra câu trả lời trực tiếp ngay câu đầu tiên.
    - **[R] Reason (Lý do):** Giải thích lý do ngắn gọn bằng câu đơn.
-   - **[E] Example / Evidence (Dẫn chứng thực tế):** Đưa ra con số cụ thể (119 bài test, 0 lỗi, thực tập Napa Global, C/C++ từ cấp 3).
+   - **[E] Example / Evidence (Dẫn chứng thực tế):** Đưa ra con số cụ thể (119 bài test, bug phát sinh = 0, thực tập Napa Global & Safebelievers, C/C++ từ cấp 3).
    - **[P] Point (Khẳng định lại):** Quyết tâm cống hiến cho công ty.
 
 ---
@@ -29,7 +27,7 @@
 * **Người phỏng vấn hỏi:**  
   `自己紹介をお願いします。`  
   *(Jikoshoukai wo onegai shimasu. - Xin mời em giới thiệu bản thân.)*
-* **Hà trả lời (100% câu đơn - nói chậm, rõ ràng, mỉm cười):**
+* **Hà trả lời (100% câu đơn - theo đúng bản gốc đã sửa):**
   1. `はじめまして。`  
      *(Hajimemashite.)*  
      👉 Em xin chào thầy/cô và quý công ty.
@@ -48,18 +46,18 @@
   6. `専門はコンピュータサイエンスです。`  
      *(Senmon wa konpyuuta saiensu desu.)*  
      👉 Chuyên ngành của em là Khoa học máy tính.
-  7. `得意な言語は、Java と C/C++ です。`  
-     *(Tokui na gengo wa, Java to C/C++ desu.)*  
-     👉 Ngôn ngữ em giỏi nhất là Java và C/C++.
+  7. `得意なプログラミング言語は、Java と C/C++ です。`  
+     *(Tokui na puroguramingu gengo wa, Java to C/C++ desu.)*  
+     👉 Ngôn ngữ lập trình sở trường của em là Java và C/C++.
   8. `Napa Global と Safebelievers でインターンをしました。`  
      *(Napa Global to Safebelievers de intaan wo shimashita.)*  
      👉 Em đã từng đi thực tập tại công ty Napa Global và Safebelievers.
   9. `アプリとウェブを作りました。`  
      *(Apuri to webu wo tsukurimashita.)*  
      👉 Em đã lập trình ứng dụng và trang web.
-  10. `趣味は、GitHubを見ることです。`  
-      *(Shumi wa, GitHub wo miru koto desu.)*  
-      👉 Sở thích của em là xem và học hỏi trên GitHub.
+  10. `趣味は、GitHubで新しい技術を見ることです。`  
+      *(Shumi wa, GitHub de atarashii gijutsu wo miru koto desu.)*  
+      👉 Sở thích của em là xem và học hỏi công nghệ mới trên GitHub.
   11. `本日はどうぞよろしくお願いいたします。`  
       *(Honjitsu wa douzo yoroshiku onegai itashimasu.)*  
       👉 Hôm nay em rất mong nhận được sự chỉ dạy của quý công ty.
@@ -67,7 +65,7 @@
 ---
 
 ### CÂU 3: KỸ NĂNG KỸ THUẬT & DỰ ÁN 119 TEST (技術スキル)
-* **Từ khóa quan trọng:** `Java と C/C++`, `Smart AI Calculator`, `119件の単体テスト`, `全部合格`, `エラーゼロ`
+* **Từ khóa quan trọng:** `Java と C/C++`, `Smart AI Calculator`, `119件の単体テスト`, `全部合格`, `バグ発生ゼロ`
 * **Người phỏng vấn hỏi:**  
   `得意な技術や言語は何ですか？`  
   *(Tokui na gijutsu ya gengo wa nan desu ka? - Ngôn ngữ hay kỹ thuật sở trường của em là gì?)*
@@ -87,10 +85,10 @@
     👉 Tự tay em đã viết 119 bài Unit Test.  
     `全部合格しました。`  
     *(Zenbu goukaku shimashita.)*  
-    👉 Toàn bộ các bài test đều vượt qua.  
-    `エラーはありませんでした。`  
-    *(Eraa wa arimasen deshita.)*  
-    👉 Không hề phát sinh bất kỳ lỗi nào.
+    👉 Toàn bộ các bài test đều vượt qua 100%.  
+    `バグは発生しませんでした。`  
+    *(Bagu wa hassei shimasen deshita.)*  
+    👉 Tuyệt đối không phát sinh lỗi (bug).
   * **[P] Khẳng định:** `テストの仕事に自信があります。`  
     *(Tesuto no shigoto ni jishin ga arimasu.)*  
     👉 Em rất tự tin vào công việc kiểm thử.
@@ -98,49 +96,49 @@
 ---
 
 ### CÂU 4: ĐIỂM MẠNH BẢN THÂN (自己PR / 長所)
-* **Từ khóa quan trọng:** `丁寧な開発`, `動けば終わりではない`, `Napa Global`, `テスト`, `エラーゼロ`
+* **Từ khóa quan trọng:** `バグを出さない`, `丁寧な開発`, `動けば終わりではない`, `Napa Global`, `バグ発生ゼロ`
 * **Người phỏng vấn hỏi:**  
   `あなたの長所（自己PR）を教えてください。`  
   *(Anata no chousho wo oshiete kudasai. - Điểm mạnh của em là gì?)*
-* **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
-  * **[P] Ý chính:** `私の強みは、「丁寧な開発」です。`  
-    *(Watashi no tsuyomi wa,「teinei na kaihatsu」desu.)*  
-    👉 Điểm mạnh của em là "phát triển cẩn thận, tỉ mỉ".
-  * **[R] Lý do:**  
+* **Hà trả lời (Chuẩn PREP - đúng bản gốc bạn sửa - dùng từ `バグ` & `発生`):**
+  * **[P] Ý chính:** `私の強みは、「バグを出さない、丁寧な開発」です。`  
+    *(Watashi no tsuyomi wa,「bagu wo dasanai, teinei na kaihatsu」desu.)*  
+    👉 Điểm mạnh của em là: "Phát triển cẩn thận, không để xảy ra bug".
+  * **[R] Quan niệm/Lý do:**  
     `プログラムは「動けば終わり」ではありません。`  
     *(Puroguramu wa「ugokeba owari」dewa arimasen.)*  
     👉 Chương trình không phải cứ "chạy được là xong".  
-    `安心して使えることが大切です。`  
-    *(Anshin shite tsukaeru koto ga taisetsu desu.)*  
+    `使う人が安心して使えることが大切です。`  
+    *(Tsukau hito ga anshin shite tsukaeru koto ga taisetsu desu.)*  
     👉 Người dùng an tâm sử dụng mới là điều quan trọng nhất.
-  * **[E] Dẫn chứng thực tế:**  
-    `Napa Global のインターンで、バックエンドを担当しました。`  
-    *(Napa Global no intaan de, bakkuendo wo tantou shimashita.)*  
+  * **[E] Dẫn chứng thực tế Napa Global:**  
+    `Napa Global のインターンで、私はバックエンドを担当しました。`  
+    *(Napa Global no intaan de, watashi wa bakkuendo wo tantou shimashita.)*  
     👉 Khi thực tập tại Napa Global, em phụ trách phần Backend.  
-    `チームで、エラーがたくさん出ました。`  
-    *(Chiimu de, eraa ga takusan demashita.)*  
-    👉 Lúc đó trong nhóm xảy ra rất nhiều lỗi.  
+    `チームで、バグがたくさん発生しました。`  
+    *(Chiimu de, bagu ga takusan hassei shimashita.)*  
+    👉 Lúc đó trong nhóm đã phát sinh rất nhiều bug.  
     `でも、私は丁寧にテストをしました。`  
     *(Demo, watashi wa teinei ni tesuto wo shimashita.)*  
     👉 Nhưng em đã chủ động test từng trường hợp rất cẩn thận.  
-    `私の作った部分は、エラーがありませんでした。`  
-    *(Watashi no tsukutta bubun wa, eraa ga arimasen deshita.)*  
-    👉 Phần tính năng do em làm không hề có lỗi nào cả.  
+    `だから、私の作った部分はバグが発生しませんでした。`  
+    *(Dakara, watashi no tsukutta bubun wa bagu ga hassei shimasen deshita.)*  
+    👉 Vì thế, phần do em làm không hề phát sinh bất kỳ bug nào.  
     `仕事も遅れませんでした。`  
     *(Shigoto mo okuremasen deshita.)*  
     👉 Tiến độ công việc cũng không bị trễ.
-  * **[P] Khẳng định:** `貴社でも、丁寧に頑張ります。`  
-    *(Kisha demo, teinei ni gambarimasu.)*  
-    👉 Vào quý công ty, em cũng sẽ làm việc thật cẩn thận như vậy.
+  * **[P] Khẳng định:** `貴社でも、丁寧に頑張りたいです。`  
+    *(Kisha demo, teinei ni gambaritai desu.)*  
+    👉 Vào quý công ty, em cũng muốn làm việc thật cẩn thận như vậy ạ.
 
 ---
 
 ### CÂU 5: ĐIỂM YẾU BẢN THÂN (短所)
-* **Từ khóa quan trọng:** `心配すること`, `ノートにメモ`, `先輩によく聞く`, `エラーゼロ`
+* **Từ khóa quan trọng:** `心配すること`, `ノートにメモ`, `先輩によく聞く`, `バグは発生しない`
 * **Người phỏng vấn hỏi:**  
   `あなたの短所は何ですか？`  
   *(Anata no tansho wa nan desu ka? - Điểm yếu của em là gì?)*
-* **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
+* **Hà trả lời (Chuẩn PREP - đúng bản gốc bạn sửa):**
   * **[P] Ý chính:** `私の短所は、心配することです。`  
     *(Watashi no tansho wa, shinpai suru koto desu.)*  
     👉 Điểm yếu của em là hay lo lắng.
@@ -161,9 +159,9 @@
     `先輩によく聞きました。`  
     *(Senpai ni yoku kikimashita.)*  
     👉 Em chủ động hỏi kỹ tiền bối trước khi làm.  
-    `だから、エラーはありませんでした。`  
-    *(Dakara, eraa wa arimasen deshita.)*  
-    👉 Nhờ thế, công việc không hề phát sinh lỗi.
+    `だから、バグは発生しませんでした。`  
+    *(Dakara, bagu wa hassei shimasen deshita.)*  
+    👉 Nhờ thế, công việc không hề phát sinh bug nào.
   * **[P] Khẳng định:** `会社でも、よく確認して頑張ります。`  
     *(Kaisha demo, yoku kakunin shite gambarimasu.)*  
     👉 Vào công ty, em cũng sẽ luôn kiểm tra kỹ lưỡng và cố gắng hết mình.
@@ -181,7 +179,7 @@
     👉 Điều quan trọng nhất là "hỏi kỹ tiền bối".
   * **[R] Lý do:** `一人で決めると、ミスが出ます。`  
     *(Hitori de kimeru to, misu ga demasu.)*  
-    👉 Nếu tự mình quyết định một mình thì sẽ dễ xảy ra lỗi.
+    👉 Nếu tự mình quyết định một mình thì sẽ dễ xảy ra sai sót.
   * **[E] Dẫn chứng:**  
     `インターンの時、分からないことはすぐ先輩に聞きました。`  
     *(Intaan no toki, wakaranai koto wa sugu senpai ni kikimashita.)*  
@@ -199,10 +197,10 @@
 ---
 
 ### CÂU 8: GIẢI QUYẾT LỖI KHÓ (課題解決)
-* **Từ khóa quan trọng:** `あせらない`, `一つずつ調べる`, `ログを見る`, `公式ドキュメント`, `先輩のアドバイス`
+* **Từ khóa quan trọng:** `あせらない`, `一つずつ調べる`, `バグが発生した時`, `ログを見る`, `先輩のアドバイス`
 * **Người phỏng vấn hỏi:**  
-  `難しいエラーが出た時、どうしますか？`  
-  *(Muzukashii eraa ga deta toki, dou shimasu ka? - Khi gặp lỗi khó, em xử lý thế nào?)*
+  `難しいバグが発生した時、どうしますか？`  
+  *(Muzukashii bagu ga hassei shita toki, dou shimasu ka? - Khi phát sinh bug khó, em xử lý thế nào?)*
 * **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
   * **[P] Ý chính:**  
     `私は、あせりません。`  
@@ -211,13 +209,13 @@
     `一つずつ調べます。`  
     *(Hitotsu-zutsu shirabemasu.)*  
     👉 Em bình tĩnh tra cứu từng bước một.
-  * **[R] Lý do:** `あせると、もっとエラーが出ます。`  
-    *(Aseru to, motto eraa ga demasu.)*  
-    👉 Vì nếu hoảng loạn sẽ càng làm sinh ra nhiều lỗi hơn.
+  * **[R] Lý do:** `あせると、もっとバグが発生します。`  
+    *(Aseru to, motto bagu ga hassei shimasu.)*  
+    👉 Vì nếu hoảng loạn sẽ càng làm phát sinh thêm nhiều bug hơn.
   * **[E] Hành động:**  
-    `難しいエラーの時、ログをよく見ました。`  
-    *(Muzukashii eraa no toki, rogu wo yoku mimashita.)*  
-    👉 Khi gặp lỗi khó, em đọc kỹ từng dòng file log.  
+    `バグが発生した時、ログをよく見ました。`  
+    *(Bagu ga hassei shita toki, rogu wo yoku mimashita.)*  
+    👉 Khi phát sinh bug, em đọc kỹ từng dòng file log.  
     `公式ドキュメントを読みました。`  
     *(Koushiki dokyumento wo yomimashita.)*  
     👉 Em đọc tài liệu chính thức của công nghệ.  
@@ -300,7 +298,7 @@
 > **Chủ đề cốt lõi:** `車（くるま）` (xe hơi) và `テスト` (kiểm thử phần mềm).
 
 ### CÂU 1: ĐỘNG CƠ ỨNG TUYỂN (志望動機)
-* **Từ khóa:** `車のテスト`, `車のエラーは危ない`, `119件のテスト`, `安全な車`
+* **Từ khóa:** `車のテスト`, `車のバグは危ない`, `119件のテスト`, `安全な車`
 * **Người hỏi:**  
   `どうして この会社に入りたいですか？`  
   *(Doushite kono kaisha ni hairitai desu ka? - Vì sao em muốn vào công ty này?)*
@@ -309,9 +307,9 @@
     *(Watashi wa, kuruma no tesuto ga shitai desu.)*  
     👉 Em muốn làm công việc kiểm thử cho xe hơi.
   * **[R] Lý do:**  
-    `車のエラーは、とても危ないです。`  
-    *(Kuruma no eraa wa, totemo abunai desu.)*  
-    👉 Lỗi phần mềm của xe hơi thì rất nguy hiểm.  
+    `車のバグは、とても危ないです。`  
+    *(Kuruma no bagu wa, totemo abunai desu.)*  
+    👉 Lỗi (bug) phần mềm của xe hơi thì rất nguy hiểm.  
     `だから、テストが一番大切です。`  
     *(Dakara, tesuto ga ichiban taisetsu desu.)*  
     👉 Vì vậy, công việc test là quan trọng nhất.
@@ -319,9 +317,9 @@
     `大学で、119件のテストをしました。`  
     *(Daigaku de, hyaku-juukyuu-ken no tesuto wo shimashita.)*  
     👉 Ở trường đại học, em đã làm 119 bài kiểm thử.  
-    `エラーはゼロでした。`  
-    *(Eraa wa zero deshita.)*  
-    👉 Lỗi bằng 0.
+    `バグは発生しませんでした。`  
+    *(Bagu wa hassei shimasen deshita.)*  
+    👉 Không hề phát sinh bug nào.
   * **[P] Khẳng định:** `テクノラボで、安全な車を作りたいです。`  
     *(TechnoLabo de, anzen na kuruma wo tsukuritai desu.)*  
     👉 Tại TechnoLabo, em muốn cùng tạo ra những chiếc xe an toàn.
@@ -390,7 +388,7 @@
 ---
 
 ## 🏭 CÔNG TY 2: 北海道電子機器株式会社 (HOKKAIDO DENSHIKIKI - HDK)
-> **Chủ đề cốt lõi:** `壊れない機械（こわれないきかい）` (thiết bị không bị hỏng) & `C/C++`.
+> **Chủ đề cốt lõi:** `壊れない機械（こわれないきかい）` (thiết bị không bao giờ bị hỏng) & `C/C++`.
 
 ### CÂU 1: ĐỘNG CƠ ỨNG TUYỂN (志望動機)
 * **Từ khóa:** `壊れない機械`, `45年`, `高校からC/C++`, `ロボットの車`, `長く使えるもの`
@@ -486,7 +484,7 @@
 > **Chủ đề cốt lõi:** `Web・Java` và Hệ thống đồ ăn nổi tiếng `豪商（ごうしょう）`.
 
 ### CÂU 1: ĐỘNG CƠ ỨNG TUYỂN (志望動機)
-* **Từ khóa:** `役に立つWebやシステム`, `50年`, `JavaとWeb`, `エラーゼロ`, `お客さんが喜ぶ`
+* **Từ khóa:** `役に立つWebやシステム`, `50年`, `JavaとWeb`, `バグ発生ゼロ`, `お客さんが喜ぶ`
 * **Người hỏi:**  
   `どうして この会社に入りたいですか？`  
   *(Doushite kono kaisha ni hairitai desu ka? - Vì sao em muốn vào công ty này?)*
@@ -501,9 +499,9 @@
     `私はインターンで、JavaとWebを作りました。`  
     *(Watashi wa intaan de, Java to Webu wo tsukurimashita.)*  
     👉 Khi đi thực tập, em đã làm việc với Java và hệ thống Web.  
-    `エラーはありませんでした。`  
-    *(Eraa wa arimasen deshita.)*  
-    👉 Phần em làm không hề có lỗi.
+    `バグは発生しませんでした。`  
+    *(Bagu wa hassei shimasen deshita.)*  
+    👉 Phần em làm không hề phát sinh bug nào.
   * **[P] Khẳng định:** `流研で、お客さんが喜ぶシステムを作りたいです。`  
     *(Ryuken de, okyaku-san ga yorokobu shisutemu wo tsukuritai desu.)*  
     👉 Tại Ryuken, em muốn tạo ra hệ thống khiến khách hàng thật hài lòng.
@@ -536,7 +534,7 @@
 ---
 
 ### CÂU 3: VÀO CÔNG TY MUỐN LÀM CÔNG VIỆC GÌ? (やりたい仕事)
-* **Từ khóa:** `Javaで「豪商」のようなシステム`, `JavaとWebは得意`, `エラーのない丁寧なコード`, `「Haさんなら安心」`
+* **Từ khóa:** `Javaで「豪商」のようなシステム`, `JavaとWebは得意`, `バグが発生しない丁寧なコード`, `「Haさんなら安心」`
 * **Người hỏi:**  
   `入社したら、どんな仕事をしたいですか？`  
   *(Nyuusha shitara, donna shigoto wo shitai desu ka? - Vào công ty em muốn làm công việc gì?)*
@@ -547,9 +545,9 @@
   * **[R] Lý do:** `JavaとWebは、私の得意なことです。`  
     *(Java to Webu wa, watashi no tokui na koto desu.)*  
     👉 Java và Web là hai lĩnh vực sở trường của em.
-  * **[E] Hành động:** `エラーのない丁寧なコードを書きます。`  
-    *(Eraa no nai teinei na koudo wo kakimasu.)*  
-    👉 Em sẽ luôn viết những dòng mã cẩn thận và không có lỗi.
+  * **[E] Hành động:** `バグが発生しない丁寧なコードを書きます。`  
+    *(Bagu ga hassei shinai teinei na koudo wo kakimasu.)*  
+    👉 Em sẽ luôn viết những dòng mã cẩn thận, không để phát sinh lỗi (bug).
   * **[P] Mục tiêu:** `「Ha さんなら安心だ」と言われたいです。`  
     *(「Ha-san nara anshin da」to iwaretai desu.)*  
     👉 Em muốn được mọi người tin tưởng nói: "Nếu là Hà thì yên tâm".

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="referrer" content="no-referrer">
-  <title>Luyện Nói Phỏng Vấn N5 - Trần Thị Ngọc Hà</title>
+  <title>Luyện Nói Phỏng Vấn N5 (Có Từ Khóa & Âm Thanh) - Trần Thị Ngọc Hà</title>
   <style>
     :root {
       --primary: #4f46e5;
       --primary-dark: #4338ca;
+      --primary-light: #e0e7ff;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text-main: #0f172a;
@@ -16,6 +16,7 @@
       --border: #e2e8f0;
       --success: #16a34a;
       --accent: #d97706;
+      --accent-bg: #fef3c7;
       --danger: #dc2626;
     }
 
@@ -35,7 +36,7 @@
     }
 
     .card {
-      max-width: 680px;
+      max-width: 700px;
       margin: 0 auto;
       background: var(--card-bg);
       border-radius: 16px;
@@ -56,33 +57,94 @@
       font-size: 0.8rem;
       color: var(--text-muted);
       text-align: center;
-      margin-bottom: 14px;
-    }
-
-    .group-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-muted);
-      margin: 10px 0 4px 2px;
+      margin-bottom: 12px;
     }
 
     .select-box {
       width: 100%;
-      padding: 10px 12px;
+      padding: 11px 12px;
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       border: 2px solid var(--primary);
       border-radius: 10px;
       background-color: #fff;
       color: var(--text-main);
       outline: none;
       margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    /* KEYWORD BOX CỰC KỲ NỔI BẬT */
+    .keyword-panel {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .kw-row {
+      margin-bottom: 10px;
+    }
+    .kw-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .kw-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .kw-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .kw-listen {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .kw-speak {
+      background: #dbeafe;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+
+    .kw-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.4;
+      padding: 6px 10px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .kw-tip {
+      font-size: 0.75rem;
+      color: #b45309;
+      margin-top: 3px;
+      font-style: italic;
+    }
+
+    /* CONTROLS */
+    .control-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
     }
 
     .play-all-btn {
-      width: 100%;
+      flex: 1;
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
       border: none;
@@ -96,11 +158,21 @@
       gap: 8px;
       cursor: pointer;
       box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
-      margin-bottom: 16px;
     }
 
     .play-all-btn:active {
       transform: scale(0.98);
+    }
+
+    .speed-select {
+      width: 100px;
+      padding: 0 8px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #fff;
+      outline: none;
     }
 
     .sentence-list {
@@ -118,16 +190,18 @@
       align-items: flex-start;
       gap: 10px;
       cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
     }
 
     .s-item:active {
+      transform: scale(0.99);
       background: #e2e8f0;
     }
 
     .s-item.playing {
       background: #e0e7ff;
       border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
     }
 
     .s-item.question-box {
@@ -137,13 +211,13 @@
 
     .s-num {
       flex-shrink: 0;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       background: #cbd5e1;
       color: #334155;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 800;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -181,6 +255,14 @@
       line-height: 1.35;
     }
 
+    .s-play-icon {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-top: 2px;
+      padding: 2px 4px;
+    }
+
     .prep-tag {
       display: inline-block;
       font-size: 0.65rem;
@@ -201,33 +283,34 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.92);
       color: #fff;
-      font-size: 0.8rem;
-      padding: 8px 16px;
+      font-size: 0.82rem;
+      padding: 8px 18px;
       border-radius: 20px;
       pointer-events: none;
       opacity: 0;
       transition: opacity 0.2s;
       z-index: 999;
+      white-space: nowrap;
     }
     .toast.show { opacity: 1; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Luyện Nói Phỏng Vấn N5 (10 Câu Cốt Lõi)</h1>
-    <p class="sub">Trần Thị Ngọc Hà • Chuẩn PREP • 100% Câu Đơn • Bagu & Hassei</p>
+    <h1>Luyện Nói Phỏng Vấn N5 Thực Chiến</h1>
+    <p class="sub">Trần Thị Ngọc Hà • Đầy đủ Keyword Tai Nghe & Miệng Nói • Chuẩn PREP N5</p>
 
-    <div class="group-label">Chọn phần luyện tập:</div>
+    <!-- SELECT CHỌN BÀI -->
     <select class="select-box" id="sec-select" onchange="switchSection(this.value)">
-      <optgroup label="🟢 PHẦN A: 10 CÂU CỐT LÕI (CHUNG 3 CÔNG TY)">
+      <optgroup label="🟢 PHẦN A: 10 CÂU HỎI CỐT LÕI (CHUNG 3 CÔNG TY)">
         <option value="c1">Câu 1: Giới thiệu bản thân (自己紹介)</option>
         <option value="c2">Câu 2: Kỹ năng & 119 Unit Tests (技術スキル)</option>
         <option value="c3">Câu 3: Điểm mạnh - Zero Bug (自己PR)</option>
         <option value="c4">Câu 4: Điểm yếu - Hay lo lắng (短所)</option>
         <option value="c5">Câu 5: Làm việc nhóm - Horenso (チームワーク)</option>
-        <option value="c6">Câu 6: Mục tiêu 5 năm (キャリアプラン)</option>
+        <option value="c6">Câu 6: Mục tiêu nghề nghiệp 5 năm (キャリアプラン)</option>
         <option value="c7">Câu 7: Lý do muốn làm việc tại Nhật (日本で働く理由)</option>
         <option value="c8">Câu 8: Xử lý bug khó (課題解決)</option>
         <option value="c9">Câu 9: Khi bị nhắc nhở - Cầu tiến (素直さ)</option>
@@ -240,16 +323,112 @@
       </optgroup>
     </select>
 
-    <button class="play-all-btn" id="play-all-btn" onclick="playAllCurrent()">
-      ▶ Nghe Toàn Bộ Phần Này
-    </button>
+    <!-- HỘP HIỂN THỊ TỪ KHÓA KEYWORD (TAI NGHE & MIỆNG NÓI) -->
+    <div class="keyword-panel" id="keyword-panel">
+      <div class="kw-row">
+        <div class="kw-header">
+          <span class="kw-badge kw-listen">🎧 KEYWORD CÂU HỎI (TAI NGHE)</span>
+        </div>
+        <div class="kw-text" id="kw-q-text">Đang tải từ khóa...</div>
+        <div class="kw-tip" id="kw-q-tip"></div>
+      </div>
+      <div class="kw-row" style="margin-top: 8px;">
+        <div class="kw-header">
+          <span class="kw-badge kw-speak">🗣️ KEYWORD TRẢ LỜI (MIỆNG NÓI)</span>
+        </div>
+        <div class="kw-text" id="kw-a-text">Đang tải từ khóa...</div>
+      </div>
+    </div>
 
+    <!-- THANH ĐIỀU KHIỂN ÂM THANH -->
+    <div class="control-bar">
+      <button class="play-all-btn" id="play-all-btn" onclick="togglePlayAll()">
+        ▶ Nghe Toàn Bộ Phần Này
+      </button>
+      <select class="speed-select" id="speed-select" onchange="changeSpeed(this.value)">
+        <option value="0.8">Tốc độ: Chậm (0.8x)</option>
+        <option value="0.9" selected>Tốc độ: Vừa (0.9x)</option>
+        <option value="1.0">Tốc độ: Chuẩn (1.0x)</option>
+      </select>
+    </div>
+
+    <!-- DANH SÁCH CÂU ĐƠN -->
     <div class="sentence-list" id="sentence-container"></div>
   </div>
 
   <div class="toast" id="toast"></div>
 
   <script>
+    // 1. DỮ LIỆU TỪ KHÓA CÂU HỎI & TRẢ LỜI
+    const SECTIONS_META = {
+      c1: {
+        kwQ: "自己紹介 (Jikoshoukai) • お願いします (Onegai shimasu) • 簡単 (Kantan)",
+        kwQTip: "👉 Cứ nghe thấy 'Jikoshoukai' là biết ngay: Bắt đầu giới thiệu bản thân!",
+        kwA: "はじめまして ➔ ゴック・ハ (川) ➔ VKU 4年生 ➔ Java と C/C++ ➔ Napa Global & Safebelievers ➔ GitHub ➔ よろしくお願いします"
+      },
+      c2: {
+        kwQ: "得意な言語 (Tokui na gengo) • 技術 (Gijutsu) • 開発経験 (Kaihatsu keiken) • プロジェクト",
+        kwQTip: "👉 Nghe thấy 'Tokui na gengo' hoặc 'Kaihatsu keiken' là hỏi về kỹ năng và dự án!",
+        kwA: "[P] Java と C/C++ ➔ [R] 一番多く使いました ➔ [E] Smart AI Calculator • 119件の単体テスト • 合格 • バグは発生しませんでした ➔ [P] テストの仕事に自信"
+      },
+      c3: {
+        kwQ: "自己PR (Jiko PR) • 長所 (Chousho) • 強み (Tsuyomi) • どんな性格 (Donna seikaku)",
+        kwQTip: "👉 Nghe thấy 'Jiko PR', 'Chousho' hoặc 'Tsuyomi' là hỏi về điểm mạnh!",
+        kwA: "[P] バグを出さない、丁寧な開発 ➔ [R] 安心して使えることが大切 ➔ [E] Napa Global • バックエンド • バグがたくさん発生 • 丁寧にテスト • バグは発生しませんでした • 遅れませんでした ➔ [P] 丁寧に頑張りたい"
+      },
+      c4: {
+        kwQ: "短所 (Tansho) • 苦手 (Nigate) • 弱み (Yowami)",
+        kwQTip: "👉 Nghe thấy 'Tansho' hoặc 'Nigate' là hỏi về điểm yếu!",
+        kwA: "[P] 心配すること ➔ [R] 丁寧に作りたい・たくさん考える ➔ [E] 新しい仕事 • ノートにメモ • 先輩によく聞く • バグは発生しませんでした ➔ [P] よく確認して頑張る"
+      },
+      c5: {
+        kwQ: "チーム (Chiimu) • チームワーク (Chiimuwaaku) • 一番大切 (Ichiban taisetsu) • 一人で (Hitori de)",
+        kwQTip: "👉 Nghe thấy 'Chiimu' hoặc 'Chiimuwaaku' là hỏi về làm việc nhóm!",
+        kwA: "[P] 先輩によく聞くこと ➔ [R] 一人で決める・バグが発生する ➔ [E] すぐ聞く • ノートにメモ • ルールを守る ➔ [P] 笑顔で仕事"
+      },
+      c6: {
+        kwQ: "5年後 (Gonen-go) • 10年後 (Juunen-go) • 将来 (Shourai) • リーダー (Riidaa) • どんなエンジニア",
+        kwQTip: "👉 Nghe thấy 'Gonen-go' hoặc 'Shourai' là hỏi về mục tiêu nghề nghiệp tương lai!",
+        kwA: "[P] リーダーになりたい ➔ [R] 後輩を助けたい ➔ [E] 日本の丁寧な作り方を勉強 • バグが発生しないシステム ➔ [P] 「Haさんに任せれば安心だ」"
+      },
+      c7: {
+        kwQ: "どうして日本 (Doushite nihon) • 日本で働きたい (Nihon de hatarakitai) • きっかけ (Kikkake) • 興味",
+        kwQTip: "👉 Nghe thấy 'Doushite nihon' hoặc 'Nihon de hatarakitai' là hỏi lý do chọn Nhật!",
+        kwA: "[P] 丁寧なものづくりが好き ➔ [R] 安全で壊れない ➔ [E] 高校から日本の技術 • ずっと働きたいと思っていた ➔ [P] 長く頑張りたい"
+      },
+      c8: {
+        kwQ: "難しいバグ (Muzukashii bagu) • エラー (Eraa) • 苦労 (Kurou) • どう乗り越えた (Dou norikoeta)",
+        kwQTip: "👉 Nghe thấy 'Muzukashii bagu', 'Eraa' hoặc 'Kurou' là hỏi cách giải quyết khi gặp bug khó!",
+        kwA: "[P] あせらない・一つずつ調べる ➔ [R] あせるともっとバグが発生する ➔ [E] ログをよく見る • 公式ドキュメント • 先輩のアドバイス ➔ [P] 正しく解決"
+      },
+      c9: {
+        kwQ: "注意された時 (Chuui sareta toki) • 改善 (Kaizen) • アドバイス (Adobaisu)",
+        kwQTip: "👉 Nghe thấy 'Chuui sareta' hoặc 'Kaizen' là hỏi khi bị nhắc nhở/góp ý tác phong!",
+        kwA: "[P] すぐに謝る・素直に直す ➔ [R] ミス・バグを隠さない ➔ [E] 「ありがとうございます」 • すぐメモ • 同じミス・バグは作らない ➔ [P] この気持ちを大切にする"
+      },
+      c10: {
+        kwQ: "残業 (Zangyou) • 日本生活 (Nihon seikatsu) • 不安 (Fuan) • 大丈夫 (Daijoubu)",
+        kwQTip: "👉 Nghe thấy 'Zangyou', 'Nihon seikatsu' hoặc 'Daijoubu' là hỏi tăng ca và sống ở Nhật!",
+        kwA: "[P] 心配ありません ➔ [R] 家族も応援 • 寒さにも強い ➔ [E] 忙しい時は残業も頑張る • 休みの日は日本語 ➔ [P] 長く働きたい"
+      },
+      technolabo: {
+        kwQ: "志望動機 • テクノラボ (Tekunorabo) • 車のテスト • 事業内容 • 入社したら • 質問",
+        kwQTip: "👉 Cứ nghe 'Tekunorabo' hoặc 'Kuruma no tesuto' là phần của công ty TechnoLabo!",
+        kwA: "車のテストがしたい ➔ 車のバグは危ない ➔ 119件のテスト • バグは発生しませんでした ➔ 安全な車を作りたい ➔ 「Haさんなら安心だ」"
+      },
+      hdk: {
+        kwQ: "志望動機 • 北海道電子機器 • 壊れない機械 • マイナス20度 • 事業内容 • 質問",
+        kwQTip: "👉 Cứ nghe 'Hokkaido Denshikiki' hoặc 'Kowarenai kikai' là phần của Hokkaido Denshikiki!",
+        kwA: "壊れない機械を作りたい ➔ 45年も壊れない製品 ➔ 高校からC/C++ • ロボットの車 ➔ マイナス20度でも動く ➔ 基本を大切に頑張る"
+      },
+      ryuken: {
+        kwQ: "志望動機 • 流研 (Ryuken) • 豪商 (Goushou) • 食べ物のシステム • Java • 質問",
+        kwQTip: "👉 Cứ nghe 'Ryuken' hoặc 'Goushou' là phần của công ty Ryuken!",
+        kwA: "役に立つWebやシステム ➔ 50年も良いシステム ➔ JavaとWeb • バグは発生しませんでした ➔ 豪商が有名 ➔ バグが発生しない丁寧なコード"
+      }
+    };
+
+    // 2. DỮ LIỆU CÂU HỎI & CÂU TRẢ LỜI PREP
     const SECTIONS = {
       c1: [
         { tag: "tag-prep-p", tagText: "BẮT ĐẦU", ja: "はじめまして。", romaji: "Hajimemashite.", vi: "Rất vui được gặp thầy/cô." },
@@ -277,7 +456,7 @@
         { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "私の強みは、「バグを出さない、丁寧な開発」です。", romaji: "Watashi no tsuyomi wa,「bagu wo dasanai, teinei na kaihatsu」desu.", vi: "[P] Điểm mạnh của em là: Phát triển cẩn thận, không để xảy ra bug." },
         { tag: "tag-prep-r", tagText: "[R] QUAN NIỆM", ja: "プログラムは「動けば終わり」ではありません。", romaji: "Puroguramu wa「ugokeba owari」dewa arimasen.", vi: "[R] Lập trình không phải cứ chạy là xong việc." },
         { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "使う人が安心して使えることが大切です。", romaji: "Tsukau hito ga anshin shite tsukaeru koto ga taisetsu desu.", vi: "[R] Người dùng an tâm sử dụng là điều quan trọng nhất." },
-        { tag: "tag-prep-e", tagText: "[E] VÍ DỤ", ja: "Napa Global のインターンで、私はバックエンドを担当しました。", romaji: "Napa Global no intaan de, bakkuendo wo tantou shimashita.", vi: "[E] Khi thực tập ở Napa Global, em làm Backend." },
+        { tag: "tag-prep-e", tagText: "[E] VÍ DỤ", ja: "Napa Global のインターンで、私はバックエンドを担当しました。", romaji: "Napa Global no intaan de, watashi wa bakkuendo wo tantou shimashita.", vi: "[E] Khi thực tập ở Napa Global, em làm Backend." },
         { tag: "tag-prep-e", tagText: "[E] SỰ CỐ", ja: "チームで、バグがたくさん発生しました。", romaji: "Chiimu de, bagu ga takusan hassei shimashita.", vi: "[E] Lúc đó trong nhóm đã phát sinh rất nhiều bug." },
         { tag: "tag-prep-e", tagText: "[E] HÀNH ĐỘNG", ja: "でも、私は丁寧にテストをしました。", romaji: "Demo, watashi wa teinei ni tesuto wo shimashita.", vi: "[E] Nhưng em đã chủ động test rất cẩn thận." },
         { tag: "tag-prep-e", tagText: "[E] KẾT QUẢ", ja: "だから、私の作った部分はバグが発生しませんでした。", romaji: "Dakara, watashi no tsukutta bubun wa bagu ga hassei shimasen deshita.", vi: "[E] Vì thế, phần do em làm không hề phát sinh bug." },
@@ -330,10 +509,10 @@
       c9: [
         { tag: "tag-prep-p", tagText: "[P] XIN LỖI", ja: "すぐに謝ります。", romaji: "Sugu ni ayamarimasu.", vi: "[P] Em lập tức xin lỗi." },
         { tag: "tag-prep-p", tagText: "[P] SỬA LỖI", ja: "素直に直します。", romaji: "Sunao ni naoshimasu.", vi: "[P] Em thật thà sửa chữa." },
-        { tag: "tag-prep-r", tagText: "[R] THÁI ĐỘ", ja: "バグを隠しません。", romaji: "Bagu wo kakushimasen.", vi: "[R] Em tuyệt đối không giấu bug (lỗi)." },
+        { tag: "tag-prep-r", tagText: "[R] THÁI ĐỘ", ja: "ミスを隠しません。", romaji: "Misu wo kakushimasen.", vi: "[R] Em tuyệt đối không giấu sai sót cá nhân (hoặc: バグを隠しません)." },
         { tag: "tag-prep-e", tagText: "[E] CẢM ƠN", ja: "先輩に注意された時、「ありがとうございます」と言いました。", romaji: "Senpai ni chuui sareta toki,「arigatou gozaimasu」to iimashita.", vi: "[E] Khi được tiền bối nhắc nhở, em nói cảm ơn." },
         { tag: "tag-prep-e", tagText: "[E] GHI CHÉP", ja: "すぐメモに書きました。", romaji: "Sugu memo ni kakimashita.", vi: "[E] Em ghi ngay vào sổ." },
-        { tag: "tag-prep-e", tagText: "[E] KHÔNG LẶP LẠI", ja: "同じバグは作りません。", romaji: "Onaji bagu wa tsukurimasen.", vi: "[E] Em không bao giờ tạo ra bug như vậy nữa." },
+        { tag: "tag-prep-e", tagText: "[E] KHÔNG LẶP LẠI", ja: "同じミスはしません。", romaji: "Onaji misu wa shimasen.", vi: "[E] Em không bao giờ lặp lại lỗi đó nữa (hoặc: 同じバグは作りません)." },
         { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "この気持ちを大切にします。", romaji: "Kono kimochi wo taisetsu ni shimasu.", vi: "[P] Em sẽ luôn giữ gìn thái độ này." }
       ],
       c10: [
@@ -424,66 +603,118 @@
     };
 
     let curSec = 'c1';
-    const audioPlayer = new Audio();
-    let voices = [];
+    let speechRate = 0.9;
     let jaVoice = null;
+    let isPlayingAll = false;
+    let playingIdx = -1;
+    const audioFallback = new Audio();
 
-    function initVoices() {
+    // Khởi tạo giọng đọc tiếng Nhật
+    function loadVoices() {
       if ('speechSynthesis' in window) {
-        voices = window.speechSynthesis.getVoices();
-        jaVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja_JP' || v.lang.startsWith('ja')) || null;
+        const vList = window.speechSynthesis.getVoices();
+        jaVoice = vList.find(v => v.lang === 'ja-JP' || v.lang === 'ja_JP' || v.lang.toLowerCase().includes('ja')) || null;
       }
     }
+    loadVoices();
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = initVoices;
-      initVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
     }
 
     function showToast(msg) {
       const t = document.getElementById('toast');
       t.innerText = msg;
       t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 2000);
+      setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    function changeSpeed(val) {
+      speechRate = parseFloat(val) || 0.9;
+      showToast('Đã đổi tốc độ đọc: ' + val + 'x');
     }
 
     function cleanTextForSpeech(text) {
       return text.replace(/面接官：/g, '').replace(/[「」『』・]/g, ' ').trim();
     }
 
+    // HỆ THỐNG PHÁT ÂM AN TOÀN TRÊN TẤT CẢ THIẾT BỊ (MOBILE + PC)
     function playAudio(text, onEnded) {
       const clean = cleanTextForSpeech(text);
-      
+      let isDone = false;
+      const finish = () => {
+        if (!isDone) {
+          isDone = true;
+          if (onEnded) onEnded();
+        }
+      };
+
+      // Phương án 1: Trình đọc Web Speech API
       if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'ja-JP';
-        u.rate = 0.85; // tốc độ chuẩn N5, chậm rãi, phát âm rõ
-        u.pitch = 1.05;
-        if (jaVoice) u.voice = jaVoice;
-        
-        let endedCalled = false;
-        u.onend = () => {
-          if (!endedCalled && onEnded) { endedCalled = true; onEnded(); }
-        };
-        u.onerror = () => {
-          if (!endedCalled && onEnded) { endedCalled = true; onEnded(); }
-        };
-        window.speechSynthesis.speak(u);
-        return;
+        try {
+          if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+          window.speechSynthesis.cancel();
+
+          const u = new SpeechSynthesisUtterance(clean);
+          u.lang = 'ja-JP';
+          u.rate = speechRate;
+          u.pitch = 1.05;
+          if (jaVoice) u.voice = jaVoice;
+
+          u.onend = finish;
+          u.onerror = (e) => {
+            console.warn('SpeechSynthesis error, falling back to TTS stream...', e);
+            playAudioFallback(clean, finish);
+          };
+
+          // Hẹn giờ tối đa 5s tránh bị treo trên mobile
+          setTimeout(() => {
+            if (!isDone && window.speechSynthesis.speaking) {
+              window.speechSynthesis.cancel();
+              finish();
+            }
+          }, 5500);
+
+          window.speechSynthesis.speak(u);
+          return;
+        } catch (err) {
+          console.warn('SpeechSynthesis init failed:', err);
+        }
       }
 
-      const enc = encodeURIComponent(clean);
-      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${enc}`;
-      audioPlayer.src = url;
-      audioPlayer.playbackRate = 0.9;
-      audioPlayer.onended = onEnded || null;
-      audioPlayer.onerror = onEnded || null;
-      audioPlayer.play().catch(() => {
-        if (onEnded) onEnded();
-      });
+      // Phương án 2: Dự phòng qua Audio TTS
+      playAudioFallback(clean, finish);
     }
 
-    function renderSentences() {
+    function playAudioFallback(text, finish) {
+      try {
+        const enc = encodeURIComponent(text);
+        const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${enc}`;
+        audioFallback.src = url;
+        audioFallback.playbackRate = speechRate;
+        audioFallback.onended = finish;
+        audioFallback.onerror = finish;
+        audioFallback.play().catch(e => {
+          console.warn('Audio play failed:', e);
+          finish();
+        });
+      } catch (err) {
+        finish();
+      }
+    }
+
+    // HIỂN THỊ TỪ KHÓA & DANH SÁCH CÂU
+    function renderSection() {
+      // 1. Cập nhật Hộp Từ Khóa
+      const meta = SECTIONS_META[curSec] || {
+        kwQ: "Đang cập nhật...",
+        kwQTip: "",
+        kwA: "Đang cập nhật..."
+      };
+      document.getElementById('kw-q-text').innerText = meta.kwQ;
+      document.getElementById('kw-q-tip').innerText = meta.kwQTip || "";
+      document.getElementById('kw-a-text').innerText = meta.kwA;
+
+      // 2. Cập nhật Danh sách câu
       const cont = document.getElementById('sentence-container');
       cont.innerHTML = '';
       const list = SECTIONS[curSec] || [];
@@ -492,9 +723,7 @@
         const div = document.createElement('div');
         div.className = `s-item ${item.isQ ? 'question-box' : ''}`;
         div.id = `s-item-${idx}`;
-        div.onclick = () => {
-          playSentence(idx);
-        };
+        div.onclick = () => playSingle(idx);
 
         div.innerHTML = `
           <div class="s-num">${idx + 1}</div>
@@ -504,13 +733,15 @@
             <div class="s-romaji">${item.romaji}</div>
             <div class="s-vi">${item.vi}</div>
           </div>
+          <div class="s-play-icon" title="Bấm để nghe">🔊</div>
         `;
         cont.appendChild(div);
       });
     }
 
-    let playingIdx = -1;
-    function playSentence(idx) {
+    function playSingle(idx) {
+      if (isPlayingAll) stopPlayAll();
+
       const list = SECTIONS[curSec] || [];
       if (!list[idx]) return;
 
@@ -525,19 +756,25 @@
       });
     }
 
-    let isPlayingAll = false;
-    async function playAllCurrent() {
-      const btn = document.getElementById('play-all-btn');
+    function togglePlayAll() {
       if (isPlayingAll) {
-        isPlayingAll = false;
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        audioPlayer.pause();
-        btn.innerText = '▶ Nghe Toàn Bộ Phần Này';
-        document.querySelectorAll('.s-item').forEach(el => el.classList.remove('playing'));
-        return;
+        stopPlayAll();
+      } else {
+        startPlayAll();
       }
+    }
 
+    function stopPlayAll() {
+      isPlayingAll = false;
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      audioFallback.pause();
+      document.getElementById('play-all-btn').innerText = '▶ Nghe Toàn Bộ Phần Này';
+      document.querySelectorAll('.s-item').forEach(el => el.classList.remove('playing'));
+    }
+
+    async function startPlayAll() {
       isPlayingAll = true;
+      const btn = document.getElementById('play-all-btn');
       btn.innerText = '⏹ Dừng Lại';
       const list = SECTIONS[curSec] || [];
 
@@ -552,30 +789,23 @@
 
         await new Promise(resolve => {
           playAudio(list[i].ja, () => {
-            setTimeout(resolve, 600); // nghỉ 0.6s giữa các câu đơn
+            setTimeout(resolve, 600); // nghỉ 0.6s giữa các câu
           });
         });
       }
 
-      isPlayingAll = false;
-      btn.innerText = '▶ Nghe Toàn Bộ Phần Này';
-      document.querySelectorAll('.s-item').forEach(el => el.classList.remove('playing'));
+      stopPlayAll();
       showToast('Đã đọc xong phần này!');
     }
 
     function switchSection(secKey) {
-      if (isPlayingAll) {
-        isPlayingAll = false;
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        audioPlayer.pause();
-        document.getElementById('play-all-btn').innerText = '▶ Nghe Toàn Bộ Phần Này';
-      }
+      stopPlayAll();
       curSec = secKey;
-      renderSentences();
+      renderSection();
     }
 
     // Khởi chạy ban đầu
-    renderSentences();
+    renderSection();
   </script>
 </body>
 </html>

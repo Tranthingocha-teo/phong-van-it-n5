@@ -1,24 +1,32 @@
 # BẢNG KỊCH BẢN PHỎNG VẤN IT (100% CÂU ĐƠN N5 - CHUẨN TỪ VỰNG: BAGU & HASSEI)
 **Ứng viên:** Trần Thị Ngọc Hà (チャン ・ ティ ・ ゴック ・ ハ)  
+**Tài liệu gốc đối chiếu:** [Google Doc 10 câu hỏi cốt lõi phỏng vấn IT](https://docs.google.com/document/d/1E__JjwA1QAI7bt-jBRsXQECoJf4Q-5EKezNLdhCmOd4/edit?tab=t.8xiujcwgnpg0)  
 **Mục tiêu 3 Công ty Hokkaido:** 株式会社テクノラボ | 北海道電子機器株式会社 | 株式会社流研  
 **Trang web luyện nói trực tuyến có phát âm:** https://tranthingocha-teo.github.io/phong-van-it-n5/  
 
 ---
 
-### 🌟 NGUYÊN TẮC VÀNG KHI NÓI (CHUẨN N5 - ĐÚNG TỪ VỰNG THỰC TẾ):
-1. **LỖI KỸ THUẬT = `バグ` (Bagu):** Tuyệt đối không dùng từ lạ, thống nhất 100% dùng `バグ` (Bug/Lỗi phần mềm).
-2. **PHÁT SINH / PHÁT HIỆN = `発生` (`はっせい` / Hassei):** Dùng `バグが発生しました` (phát sinh bug) / `バグは発生しませんでした` (không phát sinh bug).
-3. **100% CÂU ĐƠN NGẮN (3 - 5 từ/câu):** Nói xong 1 ý là ngắt bằng dấu chấm `。`. Tuyệt đối không dùng câu ghép phức tạp.
-4. **CHUẨN MÔ HÌNH PREP:**
-   - **[P] Point (Ý chính):** Đưa ra câu trả lời trực tiếp ngay câu đầu tiên.
-   - **[R] Reason (Lý do):** Giải thích lý do ngắn gọn bằng câu đơn.
-   - **[E] Example / Evidence (Dẫn chứng thực tế):** Đưa ra con số cụ thể (119 bài test, bug phát sinh = 0, thực tập Napa Global & Safebelievers, C/C++ từ cấp 3).
-   - **[P] Point (Khẳng định lại):** Quyết tâm cống hiến cho công ty.
+### 🌟 BẢNG ĐỐI CHIẾU: 100% ĐÚNG LƯU Ý & ĐẬM CHẤT HÀ
+1. **LƯU Ý CỦA GOOGLE DOC:**
+   - **Tự giới thiệu vs Tự PR:** Phân biệt rành mạch thông tin cơ bản (Câu 1) và giá trị bản thân (Câu 4).
+   - **Sở thích liên kết IT:** Nhấn mạnh sở thích xem và học công nghệ mới trên `GitHub`.
+   - **Dẫn chứng có số liệu & dự án thực tế:** 119 Unit Test trong `Smart AI Calculator`, kinh nghiệm tại `Napa Global` & `Safebelievers`.
+   - **Điểm yếu kèm hành động khắc phục:** Hay lo lắng -> ghi chép sổ tay (`メモ`), hỏi kỹ tiền bối -> `バグは発生しませんでした`.
+   - **Tinh thần cầu tiến khi bị nhắc nhở:** Khiêm tốn, lập tức xin lỗi, cảm ơn và không lặp lại lỗi.
+   - **Động cơ ứng tuyển theo từng công ty:** Nói cụ thể công nghệ và sản phẩm nổi bật của từng bên (xe hơi, âm 20 độ, Goushou).
+
+2. **CÂU CHUYỆN MANG PHONG CÁCH HÀ:**
+   - **Triết lý Zero Bug:** `「動けばいい」ではなく、「バグを出さない丁寧な開発」を大切にしています。`
+   - **Sự cố thực tế tại Napa Global:** Nhóm phát sinh nhiều bug, nhưng phần Backend của Hà tự test kỹ nên không hề phát sinh bug, không trễ hạn.
+   - **Lập trình C/C++ từ cấp 3 & xe Robocar:** Đam mê máy móc, làm xe chạy mạch.
+   - **Thói quen ghi chép sổ tay:** Luôn cẩn thận ghi chép từng bước và hỏi tiền bối.
+   - **Thống nhất từ vựng:** Lỗi kỹ thuật = **`バグ` (Bagu)**; Phát sinh / Phát hiện lỗi = **`発生` (Hassei)**.
+   - **100% CÂU ĐƠN NGẮN (3-5 từ):** Không câu ghép phức tạp, nói dứt khoát tại dấu chấm `。`.
 
 ---
 ---
 
-# 🟢 PHẦN A: 8 CÂU HỎI DÙNG CHUNG CẢ 3 CÔNG TY (100% CÂU ĐƠN)
+# 🟢 PHẦN A: 10 CÂU HỎI CỐT LÕI DÙNG CHUNG CẢ 3 CÔNG TY (100% CÂU ĐƠN)
 
 ---
 
@@ -64,7 +72,7 @@
 
 ---
 
-### CÂU 3: KỸ NĂNG KỸ THUẬT & DỰ ÁN 119 TEST (技術スキル)
+### CÂU 2: KỸ NĂNG KỸ THUẬT & DỰ ÁN 119 TEST (技術スキル)
 * **Từ khóa quan trọng:** `Java と C/C++`, `Smart AI Calculator`, `119件の単体テスト`, `全部合格`, `バグ発生ゼロ`
 * **Người phỏng vấn hỏi:**  
   `得意な技術や言語は何ですか？`  
@@ -95,12 +103,12 @@
 
 ---
 
-### CÂU 4: ĐIỂM MẠNH BẢN THÂN (自己PR / 長所)
+### CÂU 3: ĐIỂM MẠNH BẢN THÂN (自己PR / 長所)
 * **Từ khóa quan trọng:** `バグを出さない`, `丁寧な開発`, `動けば終わりではない`, `Napa Global`, `バグ発生ゼロ`
 * **Người phỏng vấn hỏi:**  
   `あなたの長所（自己PR）を教えてください。`  
   *(Anata no chousho wo oshiete kudasai. - Điểm mạnh của em là gì?)*
-* **Hà trả lời (Chuẩn PREP - đúng bản gốc bạn sửa - dùng từ `バグ` & `発生`):**
+* **Hà trả lời (Chuẩn PREP - đúng bản gốc bạn sửa):**
   * **[P] Ý chính:** `私の強みは、「バグを出さない、丁寧な開発」です。`  
     *(Watashi no tsuyomi wa,「bagu wo dasanai, teinei na kaihatsu」desu.)*  
     👉 Điểm mạnh của em là: "Phát triển cẩn thận, không để xảy ra bug".
@@ -133,7 +141,7 @@
 
 ---
 
-### CÂU 5: ĐIỂM YẾU BẢN THÂN (短所)
+### CÂU 4: ĐIỂM YẾU BẢN THÂN (短所)
 * **Từ khóa quan trọng:** `心配すること`, `ノートにメモ`, `先輩によく聞く`, `バグは発生しない`
 * **Người phỏng vấn hỏi:**  
   `あなたの短所は何ですか？`  
@@ -168,7 +176,7 @@
 
 ---
 
-### CÂU 6: LÀM VIỆC NHÓM & GIAO TIẾP (チームワーク)
+### CÂU 5: LÀM VIỆC NHÓM & GIAO TIẾP (チームワーク)
 * **Từ khóa quan trọng:** `先輩によく聞く`, `一人で決めない`, `メモ`, `ルール`, `笑顔`
 * **Người phỏng vấn hỏi:**  
   `チームで働く時、何が一番大切ですか？`  
@@ -193,6 +201,56 @@
   * **[P] Khẳng định:** `みんなと笑顔で仕事ができました。`  
     *(Minna to egao de shigoto ga dekimashita.)*  
     👉 Em luôn giữ nụ cười và làm việc rất hòa đồng cùng mọi người.
+
+---
+
+### CÂU 6: MỤC TIÊU NGHỀ NGHIỆP 5 NĂM (キャリアプラン / 5年後の目標)
+* **Từ khóa quan trọng:** `リーダーになりたい`, `後輩を助ける`, `日本の丁寧な作り方`, `バグが発生しないシステム`
+* **Người phỏng vấn hỏi:**  
+  `5年後、どんなエンジニアになりたいですか？`  
+  *(Gonen-go, donna enjinia ni naritai desu ka? - 5 năm nữa em muốn trở thành kỹ sư như thế nào?)*
+* **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
+  * **[P] Ý chính:** `5年後は、リーダーになりたいです。`  
+    *(Gonen-go wa, riidaa ni naritai desu.)*  
+    👉 5 năm sau, em muốn trở thành Leader.
+  * **[R] Lý do:** `後輩を助けたいです。`  
+    *(Kouhai wo tasuketai desu.)*  
+    👉 Em muốn hướng dẫn và giúp đỡ các bạn đàn em.
+  * **[E] Hành động:**  
+    `まずは、日本の丁寧な作り方を勉強します。`  
+    *(Mazu wa, nihon no teinei na tsukurikata wo benkyou shimasu.)*  
+    👉 Trước hết em sẽ học cách làm việc cẩn thận của người Nhật.  
+    `バグが発生しないシステムを作ります。`  
+    *(Bagu ga hassei shinai shisutemu wo tsukurimasu.)*  
+    👉 Em sẽ tạo ra các hệ thống không phát sinh bug.
+  * **[P] Khẳng định:** `「Ha さんに任せれば安心だ」と言われたいです。`  
+    *(「Ha-san ni makasereba anshin da」to iwaretai desu.)*  
+    👉 Em muốn được mọi người tin tưởng: "Giao cho Hà thì yên tâm".
+
+---
+
+### CÂU 7: LÝ DO MUỐN LÀM VIỆC TẠI NHẬT BẢN (日本への興味・就労理由)
+* **Từ khóa quan trọng:** `日本の丁寧なものづくり`, `安全で壊れない`, `高校から日本の技術`, `長く頑張りたい`
+* **Người phỏng vấn hỏi:**  
+  `どうして日本で働きたいですか？`  
+  *(Doushite nihon de hatarakitai desu ka? - Vì sao em muốn làm việc tại Nhật Bản?)*
+* **Hà trả lời (Chuẩn PREP - 100% câu đơn):**
+  * **[P] Ý chính:** `私は、日本の丁寧なものづくりが好きです。`  
+    *(Watashi wa, nihon no teinei na mono-zukuri ga suki desu.)*  
+    👉 Em rất thích cách chế tạo sản phẩm tỉ mỉ, cẩn thận của người Nhật.
+  * **[R] Lý do:** `日本のシステムは、安全で壊れません。`  
+    *(Nihon no shisutemu wa, anzen de kowaremasen.)*  
+    👉 Hệ thống của Nhật thì luôn an toàn và không bị hỏng.
+  * **[E] Dẫn chứng:**  
+    `高校の時から、日本の技術を勉強しました。`  
+    *(Koukou no toki kara, nihon no gijutsu wo benkyou shimashita.)*  
+    👉 Em đã học và tìm hiểu kỹ thuật của Nhật từ thời cấp 3.  
+    `ずっと日本で働きたいと思っていました。`  
+    *(Zutto nihon de hatarakitai to omotte imashita.)*  
+    👉 Em đã luôn mong ước được làm việc tại Nhật Bản.
+  * **[P] Khẳng định:** `日本で長く頑張りたいです。`  
+    *(Nihon de nagaku gambaritai desu.)*  
+    👉 Em muốn gắn bó và nỗ lực làm việc lâu dài tại Nhật.
 
 ---
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="referrer" content="no-referrer">
-  <title>Luyện Nói Phỏng Vấn N5 (Chuẩn Từ Vựng: Bagu & Hassei) - Trần Thị Ngọc Hà</title>
+  <title>Luyện Nói Phỏng Vấn N5 - Trần Thị Ngọc Hà</title>
   <style>
     :root {
       --primary: #4f46e5;
@@ -216,22 +216,24 @@
 </head>
 <body>
   <div class="card">
-    <h1>Luyện Nói Phỏng Vấn N5 (Câu Đơn)</h1>
-    <p class="sub">Trần Thị Ngọc Hà • 100% Câu Đơn Ngắn • Chuẩn PREP • Bagu & Hassei</p>
+    <h1>Luyện Nói Phỏng Vấn N5 (10 Câu Cốt Lõi)</h1>
+    <p class="sub">Trần Thị Ngọc Hà • Chuẩn PREP • 100% Câu Đơn • Bagu & Hassei</p>
 
     <div class="group-label">Chọn phần luyện tập:</div>
     <select class="select-box" id="sec-select" onchange="switchSection(this.value)">
-      <optgroup label="🟢 PHẦN DÙNG CHUNG CẢ 3 CÔNG TY">
+      <optgroup label="🟢 PHẦN A: 10 CÂU CỐT LÕI (CHUNG 3 CÔNG TY)">
         <option value="c1">Câu 1: Giới thiệu bản thân (自己紹介)</option>
-        <option value="c3">Câu 3: Kỹ năng & 119 Unit Tests (技術スキル)</option>
-        <option value="c4">Câu 4: Điểm mạnh - Cẩn thận Zero Bug (自己PR)</option>
-        <option value="c5">Câu 5: Điểm yếu - Hay lo lắng (短所)</option>
-        <option value="c6">Câu 6: Làm việc nhóm - Horenso (チームワーク)</option>
-        <option value="c8">Câu 8: Xử lý lỗi khó (課題解決)</option>
+        <option value="c2">Câu 2: Kỹ năng & 119 Unit Tests (技術スキル)</option>
+        <option value="c3">Câu 3: Điểm mạnh - Zero Bug (自己PR)</option>
+        <option value="c4">Câu 4: Điểm yếu - Hay lo lắng (短所)</option>
+        <option value="c5">Câu 5: Làm việc nhóm - Horenso (チームワーク)</option>
+        <option value="c6">Câu 6: Mục tiêu 5 năm (キャリアプラン)</option>
+        <option value="c7">Câu 7: Lý do muốn làm việc tại Nhật (日本で働く理由)</option>
+        <option value="c8">Câu 8: Xử lý bug khó (課題解決)</option>
         <option value="c9">Câu 9: Khi bị nhắc nhở - Cầu tiến (素直さ)</option>
         <option value="c10">Câu 10: Tăng ca & Cuộc sống Nhật (日本生活・残業)</option>
       </optgroup>
-      <optgroup label="🔴 PHẦN RIÊNG TỪNG CÔNG TY (CÂU ĐƠN PREP)">
+      <optgroup label="🔴 PHẦN B: TRẢ LỜI RIÊNG TỪNG CÔNG TY">
         <option value="technolabo">🏢 TechnoLabo: 4 Câu hỏi & Trả lời (Xe hơi & Test)</option>
         <option value="hdk">🏭 Hokkaido Denshikiki: 4 Câu hỏi & Trả lời (Hạ tầng & C/C++)</option>
         <option value="ryuken">💻 Ryuken: 4 Câu hỏi & Trả lời (Goushou & Java)</option>
@@ -262,7 +264,7 @@
         { tag: "tag-prep-e", tagText: "SỞ THÍCH", ja: "趣味は、GitHubで新しい技術を見ることです。", romaji: "Shumi wa, GitHub de atarashii gijutsu wo miru koto desu.", vi: "Sở thích là tìm hiểu công nghệ mới trên GitHub." },
         { tag: "tag-prep-p", tagText: "KẾT THÚC", ja: "本日はどうぞよろしくお願いいたします。", romaji: "Honjitsu wa douzo yoroshiku onegai itashimasu.", vi: "Hôm nay em rất mong nhận được sự giúp đỡ của thầy/cô." }
       ],
-      c3: [
+      c2: [
         { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "得意な言語は、Java と C/C++ です。", romaji: "Tokui na gengo wa, Java to C/C++ desu.", vi: "[P] Ngôn ngữ em giỏi nhất là Java và C/C++." },
         { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "大学とインターンで、一番多く使いました。", romaji: "Daigaku to intaan de, ichiban ooku tsukaimashita.", vi: "[R] Ở đại học và thực tập, em dùng nhiều nhất." },
         { tag: "tag-prep-e", tagText: "[E] DỰ ÁN", ja: "大学で「Smart AI Calculator」を作りました。", romaji: "Daigaku de「Smart AI Calculator」wo tsukurimashita.", vi: "[E] Ở trường đại học em đã làm Smart AI Calculator." },
@@ -271,18 +273,18 @@
         { tag: "tag-prep-e", tagText: "[E] KHÔNG BUG", ja: "バグは発生しませんでした。", romaji: "Bagu wa hassei shimasen deshita.", vi: "[E] Không hề phát sinh bug (lỗi)." },
         { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "テストの仕事に自信があります。", romaji: "Tesuto no shigoto ni jishin ga arimasu.", vi: "[P] Em rất tự tin vào công việc kiểm thử." }
       ],
-      c4: [
+      c3: [
         { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "私の強みは、「バグを出さない、丁寧な開発」です。", romaji: "Watashi no tsuyomi wa,「bagu wo dasanai, teinei na kaihatsu」desu.", vi: "[P] Điểm mạnh của em là: Phát triển cẩn thận, không để xảy ra bug." },
         { tag: "tag-prep-r", tagText: "[R] QUAN NIỆM", ja: "プログラムは「動けば終わり」ではありません。", romaji: "Puroguramu wa「ugokeba owari」dewa arimasen.", vi: "[R] Lập trình không phải cứ chạy là xong việc." },
         { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "使う人が安心して使えることが大切です。", romaji: "Tsukau hito ga anshin shite tsukaeru koto ga taisetsu desu.", vi: "[R] Người dùng an tâm sử dụng là điều quan trọng nhất." },
-        { tag: "tag-prep-e", tagText: "[E] VÍ DỤ", ja: "Napa Global のインターンで、私はバックエンドを担当しました。", romaji: "Napa Global no intaan de, watashi wa bakkuendo wo tantou shimashita.", vi: "[E] Khi thực tập ở Napa Global, em làm Backend." },
+        { tag: "tag-prep-e", tagText: "[E] VÍ DỤ", ja: "Napa Global のインターンで、私はバックエンドを担当しました。", romaji: "Napa Global no intaan de, bakkuendo wo tantou shimashita.", vi: "[E] Khi thực tập ở Napa Global, em làm Backend." },
         { tag: "tag-prep-e", tagText: "[E] SỰ CỐ", ja: "チームで、バグがたくさん発生しました。", romaji: "Chiimu de, bagu ga takusan hassei shimashita.", vi: "[E] Lúc đó trong nhóm đã phát sinh rất nhiều bug." },
         { tag: "tag-prep-e", tagText: "[E] HÀNH ĐỘNG", ja: "でも、私は丁寧にテストをしました。", romaji: "Demo, watashi wa teinei ni tesuto wo shimashita.", vi: "[E] Nhưng em đã chủ động test rất cẩn thận." },
         { tag: "tag-prep-e", tagText: "[E] KẾT QUẢ", ja: "だから、私の作った部分はバグが発生しませんでした。", romaji: "Dakara, watashi no tsukutta bubun wa bagu ga hassei shimasen deshita.", vi: "[E] Vì thế, phần do em làm không hề phát sinh bug." },
         { tag: "tag-prep-e", tagText: "[E] ĐÚNG HẠN", ja: "仕事も遅れませんでした。", romaji: "Shigoto mo okuremasen deshita.", vi: "[E] Tiến độ công việc cũng không bị trễ." },
         { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "貴社でも、丁寧に頑張りたいです。", romaji: "Kisha demo, teinei ni gambaritai desu.", vi: "[P] Vào quý công ty, em cũng muốn làm việc thật cẩn thận như vậy ạ." }
       ],
-      c5: [
+      c4: [
         { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "私の短所は、心配することです。", romaji: "Watashi no tansho wa, shinpai suru koto desu.", vi: "[P] Điểm yếu của em là: Hay lo lắng." },
         { tag: "tag-prep-r", tagText: "[R] NGUYÊN NHÂN", ja: "丁寧に作りたいです。", romaji: "Teinei ni tsukuritai desu.", vi: "[R] Em muốn làm cho thật cẩn thận." },
         { tag: "tag-prep-r", tagText: "[R] HẬU QUẢ", ja: "だから、たくさん考えます。", romaji: "Dakara, takusan kangaemasu.", vi: "[R] Vì thế, em suy nghĩ nhiều." },
@@ -292,13 +294,29 @@
         { tag: "tag-prep-e", tagText: "[E] KẾT QUẢ", ja: "だから、バグは発生しませんでした。", romaji: "Dakara, bagu wa hassei shimasen deshita.", vi: "[E] Vì thế, không hề phát sinh bug nào." },
         { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "会社でも、よく確認して頑張ります。", romaji: "Kaisha demo, yoku kakunin shite gambarimasu.", vi: "[P] Vào công ty, em cũng sẽ kiểm tra kỹ và cố gắng ạ." }
       ],
-      c6: [
+      c5: [
         { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "一番大切なことは、「先輩によく聞くこと」です。", romaji: "Ichiban taisetsu na koto wa,「senpai ni yoku kiku koto」desu.", vi: "[P] Điều quan trọng nhất là: Hỏi kỹ tiền bối." },
         { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "一人で決めると、ミスが出ます。", romaji: "Hitori de kimeru to, misu ga demasu.", vi: "[R] Tự mình quyết định một mình thì sẽ phát sinh lỗi." },
         { tag: "tag-prep-e", tagText: "[E] HỎI NGAY", ja: "インターンの時、分からないことはすぐ先輩に聞きました。", romaji: "Intaan no toki, wakaranai koto wa sugu senpai ni kikimashita.", vi: "[E] Khi thực tập, chuyện chưa hiểu em hỏi tiền bối ngay." },
         { tag: "tag-prep-e", tagText: "[E] GHI CHÉP", ja: "ノートにメモを書きました。", romaji: "Nooto ni memo wo kakimashita.", vi: "[E] Em ghi chép cẩn thận vào sổ." },
         { tag: "tag-prep-e", tagText: "[E] KỶ LUẬT", ja: "チームのルールを守りました。", romaji: "Chiimu no ruuru wo mamorimashita.", vi: "[E] Em tuân thủ quy tắc của đội nhóm." },
         { tag: "tag-prep-p", tagText: "[P] KẾT QUẢ", ja: "みんなと笑顔で仕事ができました。", romaji: "Minna to egao de shigoto ga dekimashita.", vi: "[P] Em luôn vui vẻ làm việc hòa đồng với mọi người." }
+      ],
+      c6: [
+        { isQ: true, tag: "tag-q", tagText: "CÂU HỎI", ja: "面接官：5年後、どんなエンジニアになりたいですか？", romaji: "Gonen-go, donna enjinia ni naritai desu ka?", vi: "Người hỏi: 5 năm nữa em muốn trở thành kỹ sư như thế nào?" },
+        { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "5年後は、リーダーになりたいです。", romaji: "Gonen-go wa, riidaa ni naritai desu.", vi: "[P] 5 năm sau, em muốn trở thành Leader." },
+        { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "後輩を助けたいです。", romaji: "Kouhai wo tasuketai desu.", vi: "[R] Em muốn giúp đỡ và hướng dẫn các bạn đàn em." },
+        { tag: "tag-prep-e", tagText: "[E] HỌC HỎI", ja: "まずは、日本の丁寧な作り方を勉強します。", romaji: "Mazu wa, nihon no teinei na tsukurikata wo benkyou shimasu.", vi: "[E] Trước hết em sẽ học cách làm việc cẩn thận của người Nhật." },
+        { tag: "tag-prep-e", tagText: "[E] HÀNH ĐỘNG", ja: "バグが発生しないシステムを作ります。", romaji: "Bagu ga hassei shinai shisutemu wo tsukurimasu.", vi: "[E] Em sẽ tạo ra các hệ thống không phát sinh bug." },
+        { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "「Ha さんに任せれば安心だ」と言われたいです。", romaji: "「Ha-san ni makasereba anshin da」to iwaretai desu.", vi: "[P] Em muốn được mọi người tin tưởng: 'Giao cho Hà thì yên tâm'." }
+      ],
+      c7: [
+        { isQ: true, tag: "tag-q", tagText: "CÂU HỎI", ja: "面接官：どうして日本で働きたいですか？", romaji: "Doushite nihon de hatarakitai desu ka?", vi: "Người hỏi: Vì sao em muốn làm việc tại Nhật Bản?" },
+        { tag: "tag-prep-p", tagText: "[P] Ý CHÍNH", ja: "私は、日本の丁寧なものづくりが好きです。", romaji: "Watashi wa, nihon no teinei na mono-zukuri ga suki desu.", vi: "[P] Em rất thích cách chế tạo sản phẩm tỉ mỉ của người Nhật." },
+        { tag: "tag-prep-r", tagText: "[R] LÝ DO", ja: "日本のシステムは、安全で壊れません。", romaji: "Nihon no shisutemu wa, anzen de kowaremasen.", vi: "[R] Hệ thống của Nhật thì luôn an toàn và không bị hỏng." },
+        { tag: "tag-prep-e", tagText: "[E] DẪN CHỨNG", ja: "高校の時から、日本の技術を勉強しました。", romaji: "Koukou no toki kara, nihon no gijutsu wo benkyou shimashita.", vi: "[E] Em đã tìm hiểu kỹ thuật của Nhật từ thời cấp 3." },
+        { tag: "tag-prep-e", tagText: "[E] MƠ ƯỚC", ja: "ずっと日本で働きたいと思っていました。", romaji: "Zutto nihon de hatarakitai to omotte imashita.", vi: "[E] Em đã luôn mong ước được làm việc tại Nhật Bản." },
+        { tag: "tag-prep-p", tagText: "[P] KHẲNG ĐỊNH", ja: "日本で長く頑張りたいです。", romaji: "Nihon de nagaku gambaritai desu.", vi: "[P] Em muốn gắn bó và nỗ lực làm việc lâu dài tại Nhật." }
       ],
       c8: [
         { tag: "tag-prep-p", tagText: "[P] THÁI ĐỘ", ja: "私は、あせりません。", romaji: "Watashi wa, aserimasen.", vi: "[P] Em không nóng vội." },

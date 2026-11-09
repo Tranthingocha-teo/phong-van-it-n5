@@ -6,9 +6,11 @@
 
 ---
 
-### 💡 BÍ KÍP DÙNG KEYWORD TRONG PHÒNG VẤN:
-1. 🎧 **KEYWORD TRONG CÂU HỎI (Tai nghe):** Khi người phỏng vấn nói một câu dài, bạn không cần phải nghe hiểu từng chữ. **Chỉ cần bắt trúng 1-2 TỪ KHÓA này là biết ngay 100% họ đang hỏi câu nào!**
-2. 🗣️ **KEYWORD TRONG CÂU TRẢ LỜI (Miệng nói):** Khi trả lời, trong đầu bạn **chỉ cần nhớ các từ khóa PREP cốt lõi**, sau đó tự tin nói từng câu đơn ngắn N5 (3-5 từ), ngắt nghỉ rõ ràng tại dấu chấm `。`.
+### 💡 BÍ KÍP DÙNG TỪ VỰNG & KEYWORD TRONG PHÒNG VẤN:
+1. 💻 **LỖI TRONG IT (Code, phần mềm, xe hơi, máy móc):** BẮT BUỘC DÙNG **`バグ` (Bagu)** và **`発生` (Hassei)**. Ví dụ: `バグが発生します` (phát sinh bug), `バグを出さない` (không tạo ra bug).
+2. 🙋 **LỖI TRONG CUỘC SỐNG & ỨNG XỬ (Sai sót, nhầm lẫn con người):** BẮT BUỘC DÙNG **`ミス` (Misu)** hoặc **`失敗` (Shippai)**. Tuyệt đối không dùng `バグ` cho đời sống con người (vì người không phải là máy móc).
+3. 🎧 **KEYWORD TRONG CÂU HỎI (Tai nghe):** Khi người phỏng vấn nói một câu dài, chỉ cần bắt trúng 1-2 từ khóa then chốt là nhận diện ngay câu hỏi.
+4. 🗣️ **KEYWORD TRONG CÂU TRẢ LỜI (Miệng nói):** Nhớ khung từ khóa PREP cốt lõi, nói câu đơn ngắn N5 (3-5 từ), ngắt nghỉ rõ ràng tại dấu chấm `。`.
 
 ---
 ---
@@ -243,8 +245,8 @@
   👉 *Cứ nghe thấy chữ "Chuui sareta" hoặc "Kaizen" là hỏi khi bị nhắc nhở/góp ý!*
 * 🗣️ **KEYWORD TRONG CÂU TRẢ LỜI (Miệng nói):**  
   * [P] `すぐに謝る` ➔ `素直に直す` (Xin lỗi ngay, thật thà sửa)  
-  * [R] `バグを隠さない` (Không bao giờ giấu bug)  
-  * [E] `「ありがとうございます」` ➔ `すぐメモに書く` ➔ `同じバグは作らない`  
+  * [R] `ミス・バグを隠さない` (Không giấu sai sót / Không giấu bug)  
+  * [E] `「ありがとうございます」` ➔ `すぐメモに書く` ➔ `同じミス・バグはしない`  
   * [P] `この気持ちを大切にする`
 * **Người phỏng vấn hỏi:**  
   `先輩や上司に注意された時、どうしますか？`  
@@ -253,15 +255,17 @@
   * **[P] Ý chính:**  
     `すぐに謝ります。` *(Sugu ni ayamarimasu.)* 👉 Em lập tức nhận lỗi và xin lỗi.  
     `素直に直します。` *(Sunao ni naoshimasu.)* 👉 Em thật thà tiếp thu và sửa chữa ngay.
-  * **[R] Lý do:** `バグを隠しません。`  
-    *(Bagu wo kakushimasen.)* 👉 Em tuyệt đối không bao giờ giấu giếm bug (lỗi).
+  * **[R] Lý do:** `ミスを隠しません。` *(hoặc: `バグを隠しません。`)*  
+    *(Misu wo kakushimasen.)* 👉 Em tuyệt đối không bao giờ giấu giếm sai sót / bug.
   * **[E] Dẫn chứng:**  
     `先輩に注意された時、「ありがとうございます」と言いました。`  
     *(Senpai ni chuui sareta toki,「arigatou gozaimasu」to iimashita.)* 👉 Khi được nhắc nhở, em nói cảm ơn.  
     `すぐメモに書きました。` *(Sugu memo ni kakimashita.)* 👉 Em ghi ngay vào sổ tay.  
-    `同じバグは作りません。` *(Onaji bagu wa tsukurimasen.)* 👉 Em cam kết không tạo ra bug như vậy nữa.
+    `同じミスはしません。` *(hoặc: `同じバグは作りません。`)*  
+    *(Onaji misu wa shimasen.)* 👉 Em cam kết không lặp lại sai sót như vậy nữa.
   * **[P] Khẳng định:** `この気持ちを大切にします。`  
-    *(Kono kimochi wo taisetsu ni shimasu.)* 👉 Em sẽ luôn trân trọng thái độ cầu tiến này.
+    *(Kono kimochi wo taisetsu ni shimasu.)* 👉 Em sẽ luôn trân trọng thái độ cầu tiến này.  
+  > 💡 *Mẹo ghi nhớ: Nếu bị nhắc nhở về tác phong/giao tiếp đời thường: dùng `ミス (Misu)`. Nếu bị nhắc về lỗi code: dùng `バグ (Bagu)`.*
 
 ---
 

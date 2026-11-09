@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="referrer" content="no-referrer">
+  <title>Luyện Nói Phỏng Vấn N5 - Trần Thị Ngọc Hà</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #e0e7ff;
+      --dark: #0f172a;
+      --bg: #f8fafc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      width: 100%;
+      max-width: 560px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #1e1b4b;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    p.sub {
+      font-size: 0.78rem;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .select-box {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .select-box:focus {
+      border-color: #4f46e5;
+      background: #fff;
+    }
+    .group-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      color: #6366f1;
+    }
+    .play-all-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5, #ec4899);
+      color: #fff;
+      border: none;
+      padding: 11px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      margin-bottom: 14px;
+      transition: transform 0.15s;
+    }
+    .play-all-btn:active { transform: scale(0.97); }
+    .sentence-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sentence-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .sentence-item.speaking {
+      border-color: #4f46e5;
+      background: #eef2ff;
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    }
+    .ja-text {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.4;
+    }
+    .romaji-text {
+      font-size: 0.75rem;
+      color: #6366f1;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .vi-text {
+      font-size: 0.76rem;
+      color: #64748b;
+      margin-top: 1px;
+    }
+    .audio-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      color: #4f46e5;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+    .audio-btn:active { transform: scale(0.9); background: #4f46e5; color: #fff; }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 99;
+    }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Luyện Nói Phỏng Vấn N5 Thực Chiến</h1>
+    <p class="sub">Trần Thị Ngọc Hà • 10 Câu Cốt Lõi • 3 Công Ty Hokkaido</p>
+
+    <div class="group-label">Chọn câu hỏi để luyện phát âm:</div>
+    <select class="select-box" id="sec-select" onchange="switchSection(this.value)">
+      <optgroup label="🟢 PHẦN DÙNG CHUNG CẢ 3 CÔNG TY">
+        <option value="c1">Câu 1: Giới thiệu bản thân (自己紹介)</option>
+        <option value="c3">Câu 3: Kỹ năng & 119 Unit Tests (技術スキル)</option>
+        <option value="c4">Câu 4: Điểm mạnh - Zero Bug (自己PR / 長所)</option>
+        <option value="c5">Câu 5: Điểm yếu - Hay lo lắng (短所)</option>
+        <option value="c6">Câu 6: Làm việc nhóm - Horenso (チームワーク)</option>
+        <option value="c8">Câu 8: Xử lý lỗi khó (課題解決)</option>
+        <option value="c9">Câu 9: Khi bị nhắc nhở - Cầu tiến (素直さ)</option>
+        <option value="c10">Câu 10: Tăng ca & Cuộc sống Nhật (日本生活・残業)</option>
+      </optgroup>
+      <optgroup label="🔴 PHẦN RIÊNG TỪNG CÔNG TY">
+        <option value="technolabo">🏢 TechnoLabo: Động cơ, hiểu biết & câu hỏi</option>
+        <option value="hdk">🏭 Hokkaido Denshikiki: Động cơ, hiểu biết & câu hỏi</option>
+        <option value="ryuken">💻 Ryuken: Động cơ, hiểu biết & câu hỏi</option>
+      </optgroup>
+    </select>
+
+    <button class="play-all-btn" id="play-all-btn" onclick="playAllCurrent()">
+      ▶ Nghe Toàn Bộ Câu Này
+    </button>
+
+    <div class="sentence-list" id="sentence-container"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const SECTIONS = {
+      c1: [
+        { ja: "はじめまして。", romaji: "Hajimemashite.", vi: "Rất vui được gặp thầy/cô." },
+        { ja: "チャン・ティ・ゴック・ハと申します。", romaji: "Chan Ti Gokku Ha to moushimasu.", vi: "Em tên là Trần Thị Ngọc Hà." },
+        { ja: "ハと呼んでください。", romaji: "Ha to yonde kudasai.", vi: "Xin hãy gọi em là Hà." },
+        { ja: "名前の「ハ」は、ベトナム語で「川」という意味です。", romaji: "Namae no「Ha」wa, Betonamu-go de「kawa」to iu imi desu.", vi: "Tên 'Hà' trong tiếng Việt có nghĩa là con sông." },
+        { ja: "VKU大学の4年生で、専門はコンピュータサイエンスです。", romaji: "VKU daigaku no yo-nensei de, senmon wa konpyuuta saiensu desu.", vi: "Em là sinh viên năm 4 trường VKU, chuyên ngành Khoa học Máy tính." },
+        { ja: "得意な言語は、Java と C/C++ です。", romaji: "Tokui na gengo wa, Java to C/C++ desu.", vi: "Ngôn ngữ sở trường của em là Java và C/C++." },
+        { ja: "Napa Global と Safebelievers でインターンを行い、アプリとウェブ開発を担当しました。", romaji: "Napa Global to Safebelievers de intaan wo okonai, apuri to webu kaihatsu wo tantou shimashita.", vi: "Em đã thực tập tại Napa Global và Safebelievers, phụ trách app và web." },
+        { ja: "趣味は、GitHubで新しい技術を調べることです。", romaji: "Shumi wa, GitHub de atarashii gijutsu wo shiraberu koto desu.", vi: "Sở thích của em là tìm hiểu công nghệ mới trên GitHub." },
+        { ja: "本日はどうぞよろしくお願いいたします。", romaji: "Honjitsu wa douzo yoroshiku onegai itashimasu.", vi: "Hôm nay em rất mong nhận được sự giúp đỡ của thầy/cô." }
+      ],
+      c3: [
+        { ja: "得意なプログラミング言語は、Java と C/C++ です。", romaji: "Tokui na puroguramingu gengo wa, Java to C/C++ desu.", vi: "[P] Ngôn ngữ em giỏi nhất là Java và C/C++." },
+        { ja: "大学とインターンシップで、一番多く使いましたから。", romaji: "Daigaku to intaanshippu de, ichiban ooku tsukaimashita kara.", vi: "[R] Vì ở đại học và thực tập, em đã sử dụng nhiều nhất." },
+        { ja: "大学では「Smart AI Calculator」を作りました。", romaji: "Daigaku dewa「Smart AI Calculator」wo tsukurimashita.", vi: "[E] Ở trường đại học em đã làm ứng dụng Smart AI Calculator." },
+        { ja: "自分で 119件の単体テスト（Unit Test）を書きました。", romaji: "Jibun de hyaku-juukyuu-ken no tantai tesuto (Unit Test) wo kakimashita.", vi: "[E] Tự em đã viết 119 bài kiểm thử đơn vị Unit Test." },
+        { ja: "全部合格させました。エラーはありませんでした。", romaji: "Zenbu goukaku sasemashita. Eraa wa arimasen deshita.", vi: "[E] Toàn bộ đã đậu 100%, không hề có lỗi nào." },
+        { ja: "このように、テストをしっかり行う開発に自信があります。", romaji: "Kono you ni, tesuto wo shikkari okonau kaihatsu ni jishin ga arimasu.", vi: "[P] Như vậy, em rất tự tin vào việc phát triển kết hợp kiểm thử kỹ lưỡng." }
+      ],
+      c4: [
+        { ja: "私の強みは、「バグを出さない、丁寧な開発」です。", romaji: "Watashi no tsuyomi wa,「bagu wo dasanai, teinei na kaihatsu」desu.", vi: "[P] Điểm mạnh của em là: Phát triển cẩn thận, không để có lỗi." },
+        { ja: "プログラムは「動けば終わり」ではありません。", romaji: "Puroguramu wa「ugokeba owari」dewa arimasen.", vi: "[R] Lập trình không phải cứ chạy là xong việc." },
+        { ja: "使う人が安心して使えることが大切です。", romaji: "Tsukau hito ga anshin shite tsukaeru koto ga taisetsu desu.", vi: "[R] Quan trọng nhất là người dùng có thể an tâm sử dụng." },
+        { ja: "Napa Global のインターンで、私はバックエンドを担当しました。", romaji: "Napa Global no intaan de, watashi wa bakkuendo wo tantou shimashita.", vi: "[E] Khi thực tập ở Napa Global, em phụ trách phần Backend." },
+        { ja: "チームで、エラーがたくさん出ました。", romaji: "Chiimu de, eraa ga takusan demashita.", vi: "[E] Lúc đó trong nhóm xảy ra rất nhiều lỗi." },
+        { ja: "でも、私は丁寧にテストをしました。", romaji: "Demo, watashi wa teinei ni tesuto wo shimashita.", vi: "[E] Nhưng em đã test rất cẩn thận." },
+        { ja: "だから、私の作った部分はエラーがありませんでした。", romaji: "Dakara, watashi no tsukutta bubun wa eraa ga arimasen deshita.", vi: "[E] Vì thế phần do em làm không hề có lỗi nào cả." },
+        { ja: "仕事も遅れませんでした。", romaji: "Shigoto mo okuremasen deshita.", vi: "[E] Tiến độ cũng không bị trễ." },
+        { ja: "貴社でも、丁寧に頑張りたいです。", romaji: "Kisha demo, teinei ni gambaritai desu.", vi: "[P] Vào công ty, em cũng muốn làm việc thật cẩn thận như vậy ạ." }
+      ],
+      c5: [
+        { ja: "私の短所は、心配することです。", romaji: "Watashi no tansho wa, shinpai suru koto desu.", vi: "[P] Điểm yếu của em là: Hay lo lắng." },
+        { ja: "丁寧に作りたいですから、たくさん考えます。", romaji: "Teinei ni tsukuritai desu kara, takusan kangaemasu.", vi: "[R] Vì muốn làm cho thật cẩn thận, nên em suy nghĩ nhiều." },
+        { ja: "Napa Global のインターンで、新しい仕事が心配でした。", romaji: "Napa Global no intaan de, atarashii shigoto ga shinpai deshita.", vi: "[E] Lúc thực tập ở Napa Global, khi gặp việc mới em đã rất lo." },
+        { ja: "でも、ノートにメモを書いて、先輩に聞きました。", romaji: "Demo, nooto ni memo wo kaite, senpai ni kikimashita.", vi: "[E] Nhưng em đã viết ghi chép vào sổ và hỏi tiền bối." },
+        { ja: "だから、エラーはありませんでした。", romaji: "Dakara, eraa wa arimasen deshita.", vi: "[E] Vì thế công việc không hề có lỗi nào cả." },
+        { ja: "会社でも、よく確認して、丁寧に頑張ります。", romaji: "Kaisha demo, yoku kakunin shite, teinei ni gambarimasu.", vi: "[P] Vào công ty, em cũng sẽ luôn kiểm tra kỹ và làm việc thật cẩn thận ạ." }
+      ],
+      c6: [
+        { ja: "「勝手に決めないで、先輩によく聞くこと」です。", romaji: "「Katte ni kimenaide, senpai ni yoku kiku koto」desu.", vi: "[P] Điều em coi trọng nhất là: Không tự ý quyết định, luôn hỏi ý kiến tiền bối." },
+        { ja: "一人で決めると、ミスが出やすいですから。", romaji: "Hitori de kimeru to, misu ga deyasui desu kara.", vi: "[R] Vì nếu tự mình quyết định một mình thì rất dễ phát sinh lỗi." },
+        { ja: "インターンの時、分からないことはすぐ先輩に聞きました。", romaji: "Intaan no toki, wakaranai koto wa sugu senpai ni kikimashita.", vi: "[E] Khi thực tập, chuyện chưa hiểu em lập tức hỏi tiền bối ngay." },
+        { ja: "ノートにメモを書きました。チームのルールを守りました。", romaji: "Nooto ni memo wo kakimashita. Chiimu no ruuru wo mamorimashita.", vi: "[E] Em ghi chép cẩn thận vào sổ và tuân thủ quy tắc của đội nhóm." },
+        { ja: "だから、みんなと笑顔で、仲良く仕事ができました。", romaji: "Dakara, minna to egao de, nakayoku shigoto ga dekimashita.", vi: "[P] Nhờ đó, em luôn vui vẻ và hợp tác làm việc hòa đồng với mọi người." }
+      ],
+      c8: [
+        { ja: "私は「あせらないで、一つずつ調べること」を大切にします。", romaji: "Watashi wa「aseranaide, hitotsu-zutsu shiraberu koto」wo taisetsu ni shimasu.", vi: "[P] Em coi trọng việc: Không nóng vội, kiên nhẫn tra cứu từng bước một." },
+        { ja: "あせると、もっとエラーが出ますから。", romaji: "Aseru to, motto eraa ga demasu kara.", vi: "[R] Vì nếu hoảng loạn sẽ càng dễ gây thêm lỗi." },
+        { ja: "インターンで難しいエラーが出た時、ログをよく見ました。", romaji: "Intaan de muzukashii eraa ga deta toki, rogu wo yoku mimashita.", vi: "[E] Khi gặp lỗi hóc búa, em xem xét kỹ file log." },
+        { ja: "そして、公式ドキュメントを丁寧に読みました。", romaji: "Soshite, koushiki dokyumento wo teinei ni yomimashita.", vi: "[E] Đọc kỹ tài liệu hướng dẫn chính thức." },
+        { ja: "先輩にもアドバイスをもらいました。", romaji: "Senpai ni mo adobaisu wo moraimashita.", vi: "[E] Đồng thời xin lời khuyên từ tiền bối." },
+        { ja: "その結果、問題を正しく解決できました。", romaji: "Sono kekka, mondai wo tadashiku kaiketsu dekimashita.", vi: "[P] Kết quả là em đã giải quyết triệt để vấn đề." }
+      ],
+      c9: [
+        { ja: "「すぐに謝って、素直に直すこと」です。", romaji: "「Sugu ni ayamatte, sunao ni naosu koto」desu.", vi: "[P] Điều quan trọng là: Lập tức xin lỗi và thật thà sửa chữa." },
+        { ja: "誰でもミスはあります。隠さないことが大切です。", romaji: "Dare demo misu wa arimasu. Kakusanai koto ga taisetsu desu.", vi: "[R] Ai cũng có lúc mắc lỗi. Quan trọng nhất là tuyệt đối không giấu lỗi." },
+        { ja: "先輩に注意された時は、「ありがとうございます」と言って、すぐメモに書きます。", romaji: "Senpai ni chuui sareta toki wa,「arigatou gozaimasu」to itte, sugu memo ni kakimasu.", vi: "[E] Khi được tiền bối nhắc nhở, em nói cảm ơn và ghi ngay vào sổ." },
+        { ja: "そして、同じミスを二度としません。", romaji: "Soshite, onaji misu wo nido to shimasen.", vi: "[E] Và nhất định không bao giờ lặp lại lỗi đó lần thứ hai." },
+        { ja: "この素直な気持ちを、仕事でも大切にします。", romaji: "Kono sunao na kimochi wo, shigoto demo taisetsu ni shimasu.", vi: "[P] Em sẽ luôn giữ thái độ cầu tiến, thật thà này trong công việc." }
+      ],
+      c10: [
+        { ja: "日本で働くことについて、心配はありません。", romaji: "Nihon de hataraku koto ni tsuite, shinpai wa arimasen.", vi: "[P] Về việc sinh hoạt và làm việc tại Nhật, em không có gì lo lắng cả." },
+        { ja: "家族も応援してくれていますし、寒さにも強いですから。", romaji: "Kazoku mo ouen shite kurete imasu shi, samusa ni mo tsuyoi desu kara.", vi: "[R] Vì gia đình rất ủng hộ em, và em cũng chịu lạnh rất tốt." },
+        { ja: "忙しい時は、残業も喜んで頑張ります。", romaji: "Isogashii toki wa, zangyou mo yorokonde gambarimasu.", vi: "[E] Khi dự án bận rộn, em sẵn sàng tăng ca hết mình." },
+        { ja: "休みの日は、しっかり休んで日本語を勉強します。", romaji: "Yasumi no hi wa, shikkari yasunde nihongo wo benkyou shimasu.", vi: "[E] Ngày nghỉ em nghỉ ngơi điều độ và tập trung học tiếng Nhật." },
+        { ja: "長く安心して、日本で働きたいです。", romaji: "Nagaku anshin shite, Nihon de hatarakitai desu.", vi: "[P] Em mong muốn làm việc lâu dài, an tâm gắn bó tại Nhật Bản." }
+      ],
+      technolabo: [
+        { ja: "私は、テクノラボ様のソフトウェア評価やテストの仕事をしたいです。", romaji: "Watashi wa, TechnoLabo-sama no sofutowea hyouka ya tesuto no shigoto wo shitai desu.", vi: "[Động cơ - P] Em muốn làm công việc đánh giá và kiểm thử phần mềm tại TechnoLabo." },
+        { ja: "車載システムは人の命に関わりますから、バグのない丁寧なテストが大切です。", romaji: "Shasai shisutemu wa hito no inochi ni kakawarimasu kara, bagu no nai teinei na tesuto ga taisetsu desu.", vi: "[Động cơ - R] Vì phần mềm trên ô tô liên quan trực tiếp đến tính mạng con người." },
+        { ja: "私はインターンシップで、テストをしっかり行い、エラーゼロを達成しました。", romaji: "Watashi wa intaanshippu de, tesuto wo shikkari okonai, eraa zero wo tassei shimashita.", vi: "[Động cơ - E] Khi đi thực tập em luôn test cẩn thận và đạt thành tích không lỗi." },
+        { ja: "この経験を活かして、テクノラボ様でバグのない安心な製品を作りたいです。", romaji: "Kono keiken wo ikashite, TechnoLabo-sama de bagu no nai anshin na seihin wo tsukuritai desu.", vi: "[Động cơ - P] Em muốn cống hiến để làm ra sản phẩm an toàn, không có bug." },
+        { ja: "はい、ホームページを拝見しました。", romaji: "Hai, hoomupeeji wo haiken shimashita.", vi: "[Hiểu biết] Vâng, em đã tìm hiểu kỹ trang web của quý công ty." },
+        { ja: "確かなテスト技術で、社会に貢献されている点に魅力を感じました。", romaji: "Tashika na tesuto gijutsu de, shakai ni kouken sarete iru ten ni miryoku wo kanjimashita.", vi: "[Hiểu biết] Em rất ấn tượng với kỹ thuật kiểm thử vững chắc bảo vệ xã hội." },
+        { ja: "車載システムのテスト業務で、新人が一番大切にすべき心構えは何でしょうか？", romaji: "Shasai shisutemu no tesuto gyoumu de, shinjin ga ichiban taisetsu ni subeki kokorogamae wa nan deshō ka?", vi: "[Câu hỏi ngược] Trong kiểm thử ô tô, tân binh cần chuẩn bị tâm thế quan trọng nhất là gì ạ?" }
+      ],
+      hdk: [
+        { ja: "私は、社会インフラを支える、安全な電子機器を作りたいです。", romaji: "Watashi wa, shakai infura wo sasaeru, anzen na denshi kiki wo tsukuritai desu.", vi: "[Động cơ - P] Em muốn làm ra các thiết bị điện tử an toàn phục vụ hạ tầng xã hội." },
+        { ja: "貴社は45年以上、止まらない確かなものづくりを続けられていますから。", romaji: "Kisha wa yonjuu-go-nen ijou, tomaranai tashika na monozukuri wo tsuzukerarete imasu kara.", vi: "[Động cơ - R] Vì công ty đã hơn 45 năm duy trì chất lượng sản xuất không ngừng nghỉ." },
+        { ja: "私は高校時代からC/C++を学び、大学のRobocar大会でも制御を大切にしました。", romaji: "Watashi wa koukou jidai kara C/C++ wo manabi, daigaku no Robocar taikai demo seigyo wo taisetsu ni shimashita.", vi: "[Động cơ - E] Em học C/C++ từ cấp 3 và thi Robocar điều khiển động cơ." },
+        { ja: "基本を大切にして、貴社で長く安心して使っていただける製品を作りたいです。", romaji: "Kihon wo taisetsu ni shite, kisha de nagaku anshin shite tsukatte itadakeru seihin wo tsukuritai desu.", vi: "[Động cơ - P] Em muốn giữ gìn nền tảng vững chắc để cùng công ty chế tạo sản phẩm tin cậy." },
+        { ja: "特に、マイナス20度や南極でも動くデータロガーの技術が素晴らしいと思いました。", romaji: "Tokuni, mainasu nijuu-do ya Nankyoku demo ugoku deetarogaa no gijutsu ga subarashii to omoimashita.", vi: "[Hiểu biết] Đặc biệt thiết bị ghi dữ liệu hoạt động ở âm 20 độ và Nam Cực rất tuyệt vời." },
+        { ja: "信頼性の高いインフラ機器を作るために、新人が最初に身につけるべき基本は何でしょうか？", romaji: "Shinraisei no takai infura kiki wo tsukuru tame ni, shinjin ga saisho ni mi ni tsukeru beki kihon wa nan deshō ka?", vi: "[Câu hỏi ngược] Để làm thiết bị hạ tầng độ tin cậy cao, kiến thức nền tảng tân binh cần rèn trước là gì ạ?" }
+      ],
+      ryuken: [
+        { ja: "私は、現場で長く役に立つ業務システムやWeb開発をしたいです。", romaji: "Watashi wa, genba de nagaku yaku ni tatsu gyoumu shisutemu ya Web kaihatsu wo shitai desu.", vi: "[Động cơ - P] Em muốn làm phần mềm nghiệp vụ doanh nghiệp và hệ thống Web hữu ích lâu dài." },
+        { ja: "流研様は50年近く、お客様に寄り添った確かなシステムを作られていますから。", romaji: "Ryuken-sama wa gojuu-nen chikaku, okyaku-sama ni yorisotta tashika na shisutemu wo tsukurarete imasu kara.", vi: "[Động cơ - R] Vì Ryuken gần 50 năm qua luôn thấu hiểu và làm hệ thống đáng tin cậy cho khách hàng." },
+        { ja: "私はインターンでバックエンドやWeb開発を担当し、バグを出さない丁寧さを学びました。", romaji: "Watashi wa intaan de bakkuendo ya Web kaihatsu wo tantou shi, bagu wo dasanai teineisa wo manabimashita.", vi: "[Động cơ - E] Khi đi thực tập em phụ trách Web/Backend và rèn luyện tính cẩn thận không để có lỗi." },
+        { ja: "この経験を活かして、流研様で安心して使っていただけるシステムを作りたいです。", romaji: "Kono keiken wo ikashite, Ryuken-sama de anshin shite tsukatte itadakeru shisutemu wo tsukuritai desu.", vi: "[Động cơ - P] Em muốn mang kinh nghiệm này để cùng quý công ty xây dựng hệ thống an tâm nhất." },
+        { ja: "特に、食品業界向けの管理システム「豪商（ごうしょう）」など、実用的な自社パッケージが素晴らしいと思いました。", romaji: "Tokuni, shokuhin gyoukai-muke no kanri shisutemu「Goushou」nado, jitsuyouteki na jisha pakkeeji ga subarashii to omoimashita.", vi: "[Hiểu biết] Em rất ấn tượng với gói phần mềm quản lý 'Goushou' dành cho ngành thực phẩm." },
+        { ja: "お客様に長く喜ばれる業務システムを作るために、プログラマーとして一番大切なことは何でしょうか？", romaji: "Okyaku-sama ni nagaku yorokobareru gyoumu shisutemu wo tsukuru tame ni, puroguramaa to shite ichiban taisetsu na koto wa nan deshō ka?", vi: "[Câu hỏi ngược] Để làm hệ thống nghiệp vụ khiến khách hàng hài lòng dài lâu, điều quan trọng nhất của lập trình viên là gì ạ?" }
+      ]
+    };
+
+    let curSec = 'c1';
+    const audioPlayer = new Audio();
+    let voices = [];
+    let jaVoice = null;
+
+    function initVoices() {
+      if ('speechSynthesis' in window) {
+        voices = window.speechSynthesis.getVoices();
+        jaVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja_JP' || v.lang.startsWith('ja')) || null;
+      }
+    }
+    if ('speechSynthesis' in window) {
+      initVoices();
+      window.speechSynthesis.onvoiceschanged = initVoices;
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+
+    function speakText(text, onEnd = null) {
+      showToast("🔊 Đang đọc: " + text.slice(0, 25));
+      try {
+        const clean = text.replace(/[\n\r]/g, ' ').trim();
+        const url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=" + encodeURIComponent(clean);
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        audioPlayer.onended = () => { if (onEnd) onEnd(); };
+        audioPlayer.onerror = () => fallbackSpeech(clean, onEnd);
+        audioPlayer.src = url;
+        audioPlayer.play().catch(() => fallbackSpeech(clean, onEnd));
+      } catch (e) {
+        fallbackSpeech(text, onEnd);
+      }
+    }
+
+    function fallbackSpeech(text, onEnd = null) {
+      if (!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') {
+        if (onEnd) onEnd();
+        return;
+      }
+      try {
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.resume();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'ja-JP';
+        u.rate = 0.95;
+        if (!jaVoice) initVoices();
+        if (jaVoice) u.voice = jaVoice;
+        u.onend = () => { if (onEnd) onEnd(); };
+        u.onerror = () => { if (onEnd) onEnd(); };
+        window.speechSynthesis.speak(u);
+      } catch (e) {
+        if (onEnd) onEnd();
+      }
+    }
+
+    function switchSection(secKey) {
+      curSec = secKey;
+      document.getElementById('sec-select').value = secKey;
+      renderList();
+    }
+
+    function renderList() {
+      const list = SECTIONS[curSec] || [];
+      const c = document.getElementById('sentence-container');
+      c.innerHTML = list.map((item, idx) => `
+        <div class="sentence-item" id="item-${idx}">
+          <div>
+            <div class="ja-text">${item.ja}</div>
+            <div class="romaji-text">${item.romaji}</div>
+            <div class="vi-text">${item.vi}</div>
+          </div>
+          <button class="audio-btn" onclick="playSingleSentence(${idx})">🔊</button>
+        </div>
+      `).join('');
+    }
+
+    function playSingleSentence(idx) {
+      document.querySelectorAll('.sentence-item').forEach(el => el.classList.remove('speaking'));
+      const itemEl = document.getElementById('item-' + idx);
+      if (itemEl) itemEl.classList.add('speaking');
+      speakText(SECTIONS[curSec][idx].ja, () => {
+        if (itemEl) itemEl.classList.remove('speaking');
+      });
+    }
+
+    function playAllCurrent(idx = 0) {
+      const list = SECTIONS[curSec] || [];
+      if (idx >= list.length) {
+        document.querySelectorAll('.sentence-item').forEach(el => el.classList.remove('speaking'));
+        showToast("✅ Đã đọc xong!");
+        return;
+      }
+      document.querySelectorAll('.sentence-item').forEach(el => el.classList.remove('speaking'));
+      const itemEl = document.getElementById('item-' + idx);
+      if (itemEl) itemEl.classList.add('speaking');
+      speakText(list[idx].ja, () => {
+        setTimeout(() => playAllCurrent(idx + 1), 350);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderList();
+    });
+  </script>
+</body>
+</html>
